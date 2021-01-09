@@ -344,9 +344,9 @@ module.exports = HandleMsg = async (aruga, message) => {
             'Berak di Celana Terus',
             'Menjadi Gila',
             'Menjadi manusiawi',
-'jomblo selamanya',
-'ga bisa berak',
-'ketiban pesawat'
+            'jomblo selamanya',
+            'ga bisa berak',
+            'ketiban pesawat'
             ]
 
         const kutuk = [
@@ -471,7 +471,7 @@ case 'zeus':
                 aruga.reply(from, 'Ada yang Error!', id)
             })
             break
- case 'citacita'://Piyobot
+ case 'citacita':
                  fetch('https://raw.githubusercontent.com/AlvioAdjiJanuar/citacita/main/citacita.txt')
             .then(res => res.text())
             .then(body => {
@@ -523,7 +523,7 @@ case 'zeus':
                 await aruga.reply(from, `Wrong Format!\n⚠️ Harap Kirim Gambar Dengan #stickerlightning`, id)
             }
             break
-        case 'stikerfire':
+       case 'sfire':
         case 'stickerfire':
             if (isMedia && type === 'image') {
                 const mediaData = await decryptMedia(message, uaOverride)
@@ -890,7 +890,6 @@ case 'nulis2':
                     })
             break
        case 'join':
-           //return aruga.reply(from, 'Jika ingin meng-invite bot ke group anda, silahkan izin ke wa.me/6282139549692, id)
             if (args.length < 2) return aruga.reply(from, 'Kirim perintah *#join linkgroup key*\n\nEx:\n#join https://chat.whatsapp.com/blablablablablabla abcde', id)
             const link = args[1]
             const key = args[2]
@@ -2700,11 +2699,11 @@ _Desc di update oleh : @${chat.groupMetadata.descOwner.replace('@c.us','')} pada
 
                     break
                     case 'grupbot':
-                        const ch = `https://chat.whatsapp.com/By3HzqTOykN72vGfWhYBe7\n\nSkuy join grup Bot`
+                        const ch = `https://chat.whatsapp.com/By3HzqTOykN72vGfWhYBe7\n\nSkuy join grup Bot Zeus`
                         await aruga.sendText(from, ch, id)
                         break
                     case 'mtk':
-case 'math':
+                      case 'math':
                         if (args.length === 3) return aruga.reply(from, `[❗] Kirim perintah *${prefix}math [ Angka ]*\nContoh : ${prefix}math 12 * 12\n*NOTE* :\n- Untuk Perkalian Menggunakan *\n- Untuk Pertambahan Menggunakan +\n- Untuk Pengurangan Mennggunakan -\n- Untuk Pembagian Menggunakan /`)
                         const mtk = body.slice(5)
                         if (typeof Math_js.evaluate(mtk) !== "number") {
@@ -2806,7 +2805,7 @@ case 'math':
                         const alasan = arg.split('|')[1]
                         await aruga.sendTextWithMentions(from, `Santet terkirim ke ${target}, Dengan alasan${alasan}\n\nJenis Santet Yang di Terima Korban adalah *${terima1}*`)
                 break
-case 'kutuk':
+           case 'kutuk':
                     if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (mentionedJidList.length === 0) return aruga.reply(from, 'Tag member yang mau dikutuk\n\nContoh : #kutuk @tag | kalo berak kaga di siram', id)
                     if (args.length === 1) return aruga.reply(from, 'Masukkan alasan kenapa menyantet dia!!\n\nContoh : #kutuk @tag | kalo berak kaga di siram', id)
