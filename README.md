@@ -1,25 +1,25 @@
 <p align="center">
-<img src="https://avatars.githubusercontent.com/thoriqazzikra" width="225" height="225"/>
+<img src="https://avatars.githubusercontent.com/ZeustrOfc" width="225" height="225"/>
 </p>
 <p align="center">
 <a href="#"><img title="Whatsapp-Bot" src="https://img.shields.io/badge/Whatsapp Bot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
-<a href="https://github.com/Urbaee"><img title="Author" src="https://img.shields.io/badge/AUTHOR-Thoriq-blue.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/ZeusFtrOfc"><img title="Author" src="https://img.shields.io/badge/AUTHOR-Zeus-blue.svg?style=for-the-badge&logo=github"></a>
 <p align="center">
-<a href="https://github.com/Urbaee/followers"><img title="Followers" src="https://img.shields.io/github/followers/Urbaee?color=blue&style=flat-square"></a>
-<a href="https://github.com/Urbaee/whatsapp-bot2/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Urbaee/whatsapp-bot2?color=red&style=flat-square"></a>
-<a href="https://github.com/Urbaee/whatsapp-bot2/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Urbaee/whatsapp-bot2?color=red&style=flat-square"></a>
-<a href="https://github.com/Urbaee/whatsapp-bot2/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Urbaee/whatsapp-bot2?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FUrbaee%2Fwhatsapp-bot2&count_bg=%232396FF&title_bg=%23555555&icon=meteor.svg&icon_color=%23F5F9FF&title=visitor&edge_flat=false"/></a>
+<a href="https://github.com/ZeusFtrOfc/followers"><img title="Followers" src="https://img.shields.io/github/followers/ZeusFtrOfc?color=blue&style=flat-square"></a>
+<a href="https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/ZeusFtrOfc/Zeus_whatsapp-bot?color=red&style=flat-square"></a>
+<a href="https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forksZeusFtrOfc/Zeus_whatsapp-bot?color=red&style=flat-square"></a>
+<a href="https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/ZeusFtrOfc/Zeus_whatsapp-bot?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FZeusFtrOfc%2FZeus_whatsapp-bot&count_bg=%232396FF&title_bg=%23555555&icon=meteor.svg&icon_color=%23F5F9FF&title=visitor&edge_flat=false"/></a>
 </p>
 
   
   
   
 <p align="left">
-<a href="https://github.com/Urbaee/whatsapp-bot2">
- <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Urbaee&repo=whatsapp-bot2&theme=dark" />
+<a href="https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot">
+ <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=ZeusFtrOfc&repo=Zeus_whatsapp-bot&theme=dark" />
   </p>
 
   
@@ -33,7 +33,7 @@
   
   
  
-<p align="center"><a href="https://wa.me/62895334962050?text=%23menu" target="_blank">My Whatsapp BOT</a>.</p>
+<p align="center"><a href="https://wa.me/6288806173745?text=%23menu" target="_blank">Zeus Whatsapp BOT</a>.</p>
 </div>
 
 
@@ -46,8 +46,8 @@ This project require NodeJS v12.
 Clone this project
 
 ```bash
-> git clone https://github.com/Urbaee/whatsapp-bot2.git
-> cd whatsapp-bot2
+> git clone https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot.git
+> cd Zeus_whatsapp-bot
 ```
 
 Install the dependencies:
@@ -67,13 +67,13 @@ Run the Whatsapp bot
 after running it you need to scan the qr
 
 ### Information
-- Change ownerNumber on [this section](https://github.com/thoriqazzikra/whatsapp-bot2/blob/main/HandleMsg.js#L136)
-- Change groupLimit on [this section](https://github.com/thoriqazzikra/whatsapp-bot2/blob/master/settings/setting.json#L3)
-- Change memberLimit on [this section](https://github.com/thoriqazzikra/whatsapp-bo2t/blob/master/settings/setting.json#L4)
-- Change prefix on [this section](https://github.com/thoriqazzikra/whatsapp-bot2/blob/master/settings/setting.json#L5)
-- Change menu on [this section](https://github.com/thoriqazzikra/whatsapp-bot2/blob/master/lib/menu.js#L32)
-- Add kata kasar on [this section](https://github.com/thoriqazzikra/whatsapp-bot2/blob/master/lib/kataKotor.js#L8)
-- Change all apiKey on [this section](https://github.com/thoriqazzikra/whatsapp-bot2/blob/master/settings/api.json)
+- Change ownerNumber on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/main/HandleMsg.js#L136)
+- Change groupLimit on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/settings/setting.json#L3)
+- Change memberLimit on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/settings/setting.json#L4)
+- Change prefix on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/settings/setting.json#L5)
+- Change menu on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/lib/menu.js#L32)
+- Add kata kasar on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/lib/kataKotor.js#L8)
+- Change all apiKey on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/settings/api.json)
 - Get Api NoBackground on [this website](https://www.remove.bg/)
 - Get Api ScreenShot on [this website](https://apiflash.com/)
 
@@ -277,6 +277,7 @@ after running it you need to scan the qr
 | Set Status Bot|✅|
 | Set Name Bot|✅|
 | Screenshot Session|✅|
+| DLL|✅|
 
 
 ## To-Do
@@ -296,7 +297,4 @@ Fix Stuck on linux, install google chrome stable:
 ```
 
 ## Thanks to
-- [WA-Automate](https://github.com/open-wa/wa-automate-nodejs)
-- [YogaSakti](https://github.com/YogaSakti/imageToSticker)
-- [MhankBarBar](https://github.com/MhankBarBar/whatsapp-bot)
-- [dandyraka](https://github.com/dandyraka/NoBadWord)
+- [ArugaZ](https://github.com/ArugaZ)
