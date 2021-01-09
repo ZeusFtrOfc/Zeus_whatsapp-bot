@@ -66,6 +66,8 @@ Run the Whatsapp bot
 
 after running it you need to scan the qr
 
+And sussces!!
+
 ### Information
 - Change ownerNumber on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/main/HandleMsg.js#L136)
 - Change groupLimit on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/settings/setting.json#L3)
@@ -278,7 +280,6 @@ after running it you need to scan the qr
 | Set Name Bot|✅|
 | Screenshot Session|✅|
 | DLL|✅|
-
 
 ## To-Do
  - Add Media Downloader
