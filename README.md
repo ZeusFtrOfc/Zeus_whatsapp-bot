@@ -78,6 +78,7 @@ And sussces!!
 - Change all apiKey on [this section](https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/blob/master/settings/api.json)
 - Get Api NoBackground on [this website](https://www.remove.bg/)
 - Get Api ScreenShot on [this website](https://apiflash.com/)
+- `vhtear`: VHTear API token. You can get it [here](wa.me/6282139549692) your can buy my apikey on number me whatsapp.
 
 ---
 
