@@ -346,7 +346,10 @@ module.exports = HandleMsg = async (aruga, message) => {
             'Menjadi manusiawi',
             'jomblo selamanya',
             'ga bisa berak',
-            'ketiban pesawat'
+            'ketiban pesawat',
+	    'jadi anak mulung',
+	    'ga jadi pacar zeus',
+	    'jadi jelek'
             ]
 
         const kutuk = [
