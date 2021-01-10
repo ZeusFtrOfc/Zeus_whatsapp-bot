@@ -1732,7 +1732,7 @@ const linkmp4 = args[0].replace('https://youtu.be/','').replace('https://www.you
                 .then(async(res) => {
                     if (res.error) return aruga.sendFileFromUrl(from, `${res.url}`, '', `${res.error}`)
                     await aruga.sendFileFromUrl(from, `${res.result.imgUrl}`, '', `Video ditemukan\n\nJudul: ${res.result.title}\nSize: ${res.result.size}\n\nSabar sedang di prosesss....`, id)
-                    await aruga.sendFileFromUrl(from, `${res.result.UrlVideo}`, '', '', id)
+                    await aruga.sendFileFromUrl(from, `${res.result.UrlVideo}`, '.mp4', '', id)
                     .catch(() => {
                         aruga.reply(from, `URL INI ${args[0]} SUDAH PERNAH DI DOWNLOAD SEBELUMNYA ..URL AKAN RESET SETELAH 60 MENIT`, id)
                     })
@@ -2312,11 +2312,11 @@ case 'ytsearch':
                 aruga.reply(from, 'Ada yang Error!', id)
             })
             break
+            
              case 'ytmp3':
       if (!isOwnerBot) return aruga.reply(from, 'Perintah ini hanya untuk Owner bot\nmaf klo ga w publiks yang ada kuota gw yang kemakan bot', id)
-                if (args.length == 0) return aruga.reply(from, `Untuk mendownload lagu dari youtube\nketik: ${prefix}ytmp3 [link_yt]`, id)
-  const linkmp3 = args[2].replace('https://youtu.be/','').replace('https://www.youtube.com/watch?v=','')
-                
+                             if (args.length == 0) return aruga.reply(from, `Untuk mendownload lagu dari youtube\nketik: ${prefix}ytmp3 [link_yt]`, id)
+                const linkmp3 = args[0].replace('https://youtu.be/','').replace('https://www.youtube.com/watch?v=','')
                 rugaapi.ytmp3(`https://youtu.be/${linkmp3}`)
                 .then(async(res) => {
                     if (res.error) return aruga.sendFileFromUrl(from, `${res.url}`, '', `${res.error}`)
@@ -2327,6 +2327,7 @@ case 'ytsearch':
             })
                 })
                 break
+
  case 'mapz'://by aqulz
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}mapz [optional]*, Contoh : *${prefix}maps Jakarta*`, id)
             const mapz = body.slice(6)
