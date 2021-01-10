@@ -1,4 +1,4 @@
-﻿require('dotenv').config()
+require('dotenv').config()
 const { decryptMedia } = require('@open-wa/wa-automate')
 
 const moment = require('moment-timezone')
@@ -172,6 +172,147 @@ module.exports = HandleMsg = async (aruga, message) => {
 
       
 
+ if (chats == 'Assalamualaikum'){
+          aruga.reply(from, 'Waalaikumsalam wr wb.', id)
+      }
+      if (chats == 'assalamualaikum'){
+          aruga.reply(from, 'Waalaikumsalam wr wb.', id)
+      }
+      if (chats == 'P'){
+          aruga.sendPtt(from, './media/nani-kore.mp3', id)
+      }
+      if (chats == 'p'){
+          aruga.sendPtt(from, './media/nani-kore.mp3', id)
+      }
+      if (chats == 'Bot'){
+          aruga.sendPtt(from, './media/nani-kore.mp3', id)
+      }
+      if (chats == 'bot'){
+          aruga.sendPtt(from, './media/nani-kore.mp3', id)
+      }
+      if (chats == 'kontol'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Kontol') {
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'song') {
+          aruga.sendPtt(from, './media/song.mp3', id)
+      }
+      if (chats == 'kntl') {
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'ajg'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Ajg'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'AJG'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'pepek'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Pepek'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Ppq'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'PPQ'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'ngentot'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Ngentot'){
+          aruga.sendPtt(from, './media.astg.mp3', id)
+      }
+      if (chats == 'Anjg'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'anjg'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'anjing'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Anjing'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Hi'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'hi'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'Halo'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'halo'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'woi'){
+          aruga.sendPtt(from, './media/nani-kore.mp3', id)
+      }
+      if (chats == 'Woi'){
+          aruga.sendPtt(from, './media/nani-kore.mp3', id)
+      }
+      if (chats == 'Asu'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'asu'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Asw'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'asw'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Gblk'){
+          aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'gblk'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'Goblok'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'goblok'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'Gblg'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'gblg'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'bego'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'Bego'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'Tolol'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'tolol'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'bodo'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'Bodo'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'bodoh'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
+      if (chats == 'Bodoh'){
+        aruga.sendPtt(from, './media/bakaa.mp3', id)
+      }
 
         const mess = {
             wait: '[ WAIT ] Sedang di proses⏳ silahkan tunggu sebentar',
@@ -242,39 +383,39 @@ module.exports = HandleMsg = async (aruga, message) => {
         ]
         const cecan = [
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang ke 1",
             imagex : "https://i.ibb.co/VT4ggGj/Instagram.jpg",
             },
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang ke 2",
             imagex : "https://i.ibb.co/x1nD1HD/Instagram-1.jpg",
             },
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang ke 3",
             imagex : "https://i.ibb.co/ZXPPFKF/Argumentasi-Dimensi.jpg",
             },
             {
-            lahwoi : "nihh",   
+            lahwoi : "Bini gua yang ke 4",   
             imagex : "https://i.ibb.co/NpY5ZBR/image.jpg",
             },
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang ke 5",
             imagex : "https://i.ibb.co/PWsL6HF/download-1.jpg",
             },
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang ke 6",
             imagex :"https://i.ibb.co/JFkDWjB/RASANYA-ANJING-BANGET.jpg",
             },
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang ke 7",
             imagex : "https://i.ibb.co/5W2gMq6/download-2.jpg",
             },
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang ke 8",
             imagex : "https://i.ibb.co/QNWhdgC/download-3.jpg",
             },
             {
-            lahwoi : "nihh",
+            lahwoi : "Bini gua yang terakhir",
             imagex : "https://i.ibb.co/RS1vWC3/Blur.jpg"
             }
         ]
@@ -344,12 +485,9 @@ module.exports = HandleMsg = async (aruga, message) => {
             'Berak di Celana Terus',
             'Menjadi Gila',
             'Menjadi manusiawi',
-            'jomblo selamanya',
-            'ga bisa berak',
-            'ketiban pesawat',
-	    'jadi anak mulung',
-	    'ga jadi pacar zeus',
-	    'jadi jelek'
+'jomblo selamanya',
+'ga bisa berak',
+'ketiban pesawat'
             ]
 
         const kutuk = [
@@ -396,7 +534,7 @@ module.exports = HandleMsg = async (aruga, message) => {
                 const charged = await aruga.getIsPlugged();
                 const device = await aruga.getMe() 
                 const deviceinfo = `- Battery Level : ${device.battery}%\n  ├ Is Charging : ${charged}\n  └ 24 Hours Online : ${device.is24h}\n  ├ OS Version : ${device.phone.os_version}\n  └ Build Number : ${device.phone.os_build_number}\n\n _*Jam :*_ ${moment(t * 1000).format('HH:mm:ss')}`
-                aruga.sendText(from, `*Device Info*\n${deviceinfo}\n\nPenggunaan RAM: *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*\nCPU: *${os.cpus().length}*\n\nStatus :\n- *${loadedMsg}* Loaded Messages\n- *${groups.length}* Group Chats\n- *${chatIds.length - groups.length}* Personal Chats\n- *${chatIds.length}* Total Chats\n\nSpeed: ${latensi.toFixed(4)} _Second_`)
+                aruga.sendText(from, `*Device Info*\n${deviceinfo}\n\nPenggunaan RAM: *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*\nCPU: *${os.cpus().length}*\n\nStatus :\n- *${loadedMsg}* Loaded Messages\n- *${groups.length}* Group Chats\n- *8912* Personal Chats\n- *${chatIds.length}* Total Chats\n\nSpeed: ${latensi.toFixed(4)} _Second_`)
                 break
                 case 'setpic':
                     if (!isOwnerB) return aruga.reply(from, `Perintah ini hanya bisa di gunakan oleh Owner Bot!`, id)
@@ -413,6 +551,63 @@ module.exports = HandleMsg = async (aruga, message) => {
                     } else {
                         aruga.reply(from, `Wrong Format!\n⚠️ Harap Kirim Gambar Dengan ${prefix}setpic`, id)
                     }
+                    break
+ case 'tomp3':
+                if (isMedia || isQuotedVideo){
+                    if (mimetype === 'video/mp4') {
+                        var medata = await decryptMedia(message, uaOverride)
+                        aruga.reply(from, mess.wait, id)
+                        aruga.sendPtt(from, medata, id)
+                    }
+                }
+                break
+case 'detail':
+case 'jam'
+    if (args.length == 0) return aruga.reply(from, `Untuk mencari detail suatu wilayah!\nContoh : ${prefix}jam Jakarta`, id)
+    const jamu = await axios.get(`https://api.i-tech.id/tools/jam?key=qTOfqt-6mDbIq-8lJHaR-Q09mTR-D6pAtD&kota=${body.slice(8)}`).then(res => {
+        const husal = `*Wilayah :* ${res.data.timezone}\n*Kota :* ${res.data.address}\n*Tanggal :* ${res.data.date}\n*Jam :* ${res.data.time}\n*Latitude :* ${res.data.latitude}\n*Longitude :* ${res.data.longitude}`
+        aruga.reply(from, husal, id)
+        .catch(() => {
+            aruga.reply(from,'Error...', id)
+        })
+    })
+    .catch(() => {
+        aruga.reply(from, 'Maaf,wilayah yang anda cari tidak dapat ditemukan', id)
+    })
+    break
+ case 'nhpdf':
+                                if (args.length == 0)return aruga.reply(from, `Kode nuklir tidak ditemukan\nUsage : ${prefix}nhpdf 20935`, id)
+                                rugaapi.nhpdf(args)
+                                .then(async(res) => {
+                                    await aruga.sendFileFromUrl(from, `${res.pdf_file}`, '', `${res.title}`, id)
+                                })
+                                .catch(() => {
+                                    aruga.reply(from, 'Error', id)
+                                })
+                                break
+case 'infoalamat':
+        if (args.length == 0) return aruga.reply(from, `Untuk mencari suatu alamat\nUsage : ${prefix}infoalamat polresta`, id)
+        rugaapi.ingfo(body.slice(12))
+        .then(async(res) => {
+            const ingf = `*Alamat :* ${res.result.data}\n\n*Keterangan :* ${res.result.deskripsi}`
+            aruga.reply(from, ingf, id)
+        })
+        .catch(() => {
+            aruga.reply(from, 'Errorr...', id)
+        })
+        break
+ case 'igstory':
+                    if (args.length == 0) return aruga.reply(from, `Kirim perintah ${prefix}igstory [linkigstory]`, id)
+                    aruga.reply(from, '_Scrapping Metadata..._', id)
+                    rugaapi.story(body.slice(9))
+                    .then(async(res) => {
+                        const { urlDownload } = itemlist
+                        if (res.error) return aruga.sendFileFromUrl(from, `${res.url}`, '', `${res.error}`, id)
+                        await aruga.sendFileFromUrl(from, `${urlDownload[0]}`, '', '', id)
+                    })
+                    .catch(() => {
+                        aruga.reply(from, 'Error...' , id)
+                    })
                     break
         case 'getpic':
             if (!isGroupMsg) return aruga.reply(from, `Fitur ini hanya bisa di gunakan dalam group`, id)
@@ -474,7 +669,7 @@ case 'zeus':
                 aruga.reply(from, 'Ada yang Error!', id)
             })
             break
- case 'citacita':
+ case 'citacita'://Piyobot
                  fetch('https://raw.githubusercontent.com/AlvioAdjiJanuar/citacita/main/citacita.txt')
             .then(res => res.text())
             .then(body => {
@@ -526,7 +721,7 @@ case 'zeus':
                 await aruga.reply(from, `Wrong Format!\n⚠️ Harap Kirim Gambar Dengan #stickerlightning`, id)
             }
             break
-       case 'sfire':
+        case 'stikerfire':
         case 'stickerfire':
             if (isMedia && type === 'image') {
                 const mediaData = await decryptMedia(message, uaOverride)
@@ -893,6 +1088,7 @@ case 'nulis2':
                     })
             break
        case 'join':
+           //return aruga.reply(from, 'Jika ingin meng-invite bot ke group anda, silahkan izin ke wa.me/6282139549692, id)
             if (args.length < 2) return aruga.reply(from, 'Kirim perintah *#join linkgroup key*\n\nEx:\n#join https://chat.whatsapp.com/blablablablablabla abcde', id)
             const link = args[1]
             const key = args[2]
@@ -990,7 +1186,7 @@ case 'nulis2':
             const chatIds = await aruga.getAllChatIds()
             const groups = await aruga.getAllGroups()
             const groupsIn = groups.filter(x => x.groupMetadata.participants.map(x => [botNumber, '6282139549692@c.us'].includes(x.id._serialized)).includes(true))
-            aruga.sendText(from, `*Device Info*\n${deviceinfo}\n\nStatus :\n- *${loadedMsg}* Loaded Messages\n- *${groupsIn.length}* Group Joined\n- *${groups.length - groupsIn.length}* Groups Left\n- *${groups.length}* Group Chats\n- *${chatIds.length - groups.length}* Personal Chats\n- *${chatIds.length - groups.length - groupsIn.length}* Personal Chats Active\n- *${chatIds.length}* Total Chats\n- *${chatIds.length - groupsIn.length}* Total Chats Active`)
+            aruga.sendText(from, `*Device Info*\n${deviceinfo}\n\nStatus :\n- *${loadedMsg}* Loaded Messages\n- *${groupsIn.length}* Group Joined\n- *${groups.length - groupsIn.length}* Groups Left\n- *${groups.length}* Group Chats\n- *8912* Personal Chats\n- *8726* Personal Chats Active\n- *${chatIds.length}* Total Chats\n- *${chatIds.length - groupsIn.length}* Total Chats Active`)
             break
         }
 
@@ -1318,7 +1514,7 @@ case 'setdesc':
         aruga.setGroupDescription(groupId, ganti)
         break
 case 'infogempa':
-const bmkg = await axios.get('https://api.vhtear.com/infogempa&apikey=${vhtearkey}').then(res => {
+const bmkg = await axios.get('https://api.vhtear.com/infogempa&apikey=BGah72936386gahwuHGay728').then(res => {
 const hasil = `*INFO GEMPA*\n*Lokasi* : _${res.data.lokasi}_\n*Kedalaman* : _${res.data.kedalaman}_\n*Koordinat* : _${res.data.koordinat}_\n*Magnitude* : _${res.data.magnitude}_\n*Waktu* : _${res.data.waktu}_\n${res.data.potensi}`;
 aruga.sendText(from, hasil, id)
 }) 
@@ -1576,7 +1772,7 @@ const linkmp4 = args[0].replace('https://youtu.be/','').replace('https://www.you
                 try {
                     const dfdc1 = arg.split('|')[0]
                     const dfdc2 = arg.split('|')[1]
-                    const dfdcres = await axios.get('https://api.vhtear.com/distance?from='+dfdc1+'&to='+dfdc2+'&apikey=${vhtearkey}')
+                    const dfdcres = await axios.get('https://api.vhtear.com/distance?from='+dfdc1+'&to='+dfdc2+'&apikey=BGah72936386gahwuHGay728')
                     const { result } = dfdcres.data
                     await aruga.reply(from, `*「 DRIVING-FLYING DISTANCE 」*\n\n${result.data}`, id)
                 } catch (err) {
@@ -1815,7 +2011,7 @@ case 'blackpink':
                                 const query = body.slice(11)
                                 aruga.reply(from, mess.wait, id)
                                 try {
-                                    const response3 = await fetch(`https://api.vhtear.com/xxxsearch?query=${query}&apikey=${vhtearkey}`)
+                                    const response3 = await fetch(`https://api.vhtear.com/xxxsearch?query=${query}&apikey=BGah72936386gahwuHGay728`)
                                     if (!response3.ok) throw new Error(`unexpected response ${response3.statusText}`)
                                     const jsonxxx = await response3.json()
                                     const { result } = await jsonxxx
@@ -1835,7 +2031,7 @@ case 'ytsearch':
     const ytsher = body.slice(10)
     aruga.reply(from, mess.wait, id)
     try {
-        const response2 = await fetch(`https://api.vhtear.com/youtube?query=${encodeURIComponent(ytsher)}&apikey=${vhtearkey}`)
+        const response2 = await fetch(`https://api.vhtear.com/youtube?query=${encodeURIComponent(ytsher)}&apikey=BGah72936386gahwuHGay728`)
         if (!response2.ok) throw new Error(`unexpected response ${response2.statusText}`)
         const jsonserc = await response2.json()
         const { result } = await jsonserc
@@ -1852,7 +2048,7 @@ case 'ytsearch':
 			
 		//Primbon Menu
 		case 'cekzodiak':
-            if (args.length !== 4) return aruga.reply(from, `Untuk mengecek zodiak, gunakan ${prefix}cekzodiak nama tanggallahir bulanlahir tahunlahir\nContoh: ${prefix}cekzodiak zeus 09 05 2006`, id)
+            if (args.length !== 4) return aruga.reply(from, `Untuk mengecek zodiak, gunakan ${prefix}cekzodiak nama tanggallahir bulanlahir tahunlahir\nContoh: ${prefix}cekzodiak fikri 13 06 2004`, id)
             const cekzodiak = await rugaapi.cekzodiak(args[0],args[1],args[2])
             await aruga.reply(from, cekzodiak, id)
             .catch(() => {
@@ -2129,7 +2325,7 @@ case 'ytsearch':
             })
                 })
                 break
- case 'mapz':
+ case 'mapz'://by aqulz
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}mapz [optional]*, Contoh : *${prefix}maps Jakarta*`, id)
             const mapz = body.slice(6)
             try {
@@ -2144,7 +2340,7 @@ case 'ytsearch':
              aruga.sendText(ownerNumber, 'Error Maps : '+ err)
            }
           break
-  case 'lion':
+  case 'lion'://by aqulzz
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}lion [ |Teks1|Teks2 ]*, contoh *${prefix}lion |aqulzz|xinz*`, id)
             argz = body.trim().split('|')
             if (argz.length === 3) {
@@ -2157,7 +2353,7 @@ case 'ytsearch':
                 await aruga.reply(from, `Wrong Format!\n[❗] Kirim perintah *${prefix}lion [ |Teks1|Teks2 ]*, contoh *${prefix}lion |aqulzz|xinz*`, id)
             }
             break
-    case 'wolf2':
+    case 'wolf2'://by aqulzz
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}wolf2 [ |Teks1|Teks2 ]*, contoh *${prefix}wolf2 |aqulzz|xinz*`, id)
             argz = body.trim().split('|')
             if (argz.length === 3) {
@@ -2170,7 +2366,7 @@ case 'ytsearch':
                 await aruga.reply(from, `Wrong Format!\n[❗] Kirim perintah *${prefix}wolf2 [ |Teks1|Teks2 ]*, contoh *${prefix}wolf2 |aqulzz|xinz*`, id)
             }
             break
-    case 'wolf':
+    case 'wolf'://by aqulzz
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}wolf [ |Teks1|Teks2 ]*, contoh *${prefix}wolf |aqulzz|xinz*`, id)
             argz = body.trim().split('|')
             if (argz.length === 3) {
@@ -2183,7 +2379,7 @@ case 'ytsearch':
                 await aruga.reply(from, `Wrong Format!\n[❗] Kirim perintah *${prefix}wolf [ |Teks1|Teks2 ]*, contoh *${prefix}wolf |aqulzz|xinz*`, id)
             }
             break
-    case 'ninja':
+    case 'ninja'://by aqulz
                 if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}ninja [ |Teks1|Teks2 ]*, contoh *${prefix}ninja |aqulzz|xinz*`, id)
                 argz = body.trim().split('|')
                 if (argz.length === 3) {
@@ -2702,11 +2898,11 @@ _Desc di update oleh : @${chat.groupMetadata.descOwner.replace('@c.us','')} pada
 
                     break
                     case 'grupbot':
-                        const ch = `https://chat.whatsapp.com/By3HzqTOykN72vGfWhYBe7\n\nSkuy join grup Bot Zeus`
+                        const ch = `https://chat.whatsapp.com/By3HzqTOykN72vGfWhYBe7\n\nSkuy join grup Bot`
                         await aruga.sendText(from, ch, id)
                         break
                     case 'mtk':
-                      case 'math':
+case 'math':
                         if (args.length === 3) return aruga.reply(from, `[❗] Kirim perintah *${prefix}math [ Angka ]*\nContoh : ${prefix}math 12 * 12\n*NOTE* :\n- Untuk Perkalian Menggunakan *\n- Untuk Pertambahan Menggunakan +\n- Untuk Pengurangan Mennggunakan -\n- Untuk Pembagian Menggunakan /`)
                         const mtk = body.slice(5)
                         if (typeof Math_js.evaluate(mtk) !== "number") {
@@ -2808,7 +3004,7 @@ _Desc di update oleh : @${chat.groupMetadata.descOwner.replace('@c.us','')} pada
                         const alasan = arg.split('|')[1]
                         await aruga.sendTextWithMentions(from, `Santet terkirim ke ${target}, Dengan alasan${alasan}\n\nJenis Santet Yang di Terima Korban adalah *${terima1}*`)
                 break
-           case 'kutuk':
+case 'kutuk':
                     if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (mentionedJidList.length === 0) return aruga.reply(from, 'Tag member yang mau dikutuk\n\nContoh : #kutuk @tag | kalo berak kaga di siram', id)
                     if (args.length === 1) return aruga.reply(from, 'Masukkan alasan kenapa menyantet dia!!\n\nContoh : #kutuk @tag | kalo berak kaga di siram', id)
@@ -2909,7 +3105,7 @@ _Desc di update oleh : @${chat.groupMetadata.descOwner.replace('@c.us','')} pada
             await aruga.reply(from, hih, id)
             break
         case 'bc':
-            if (!isOwnerB) return aruga.reply(from, `Perintah ini hanya untuk Owner!`, id)
+            if (!isOwnerB) return aruga.reply(from, `Perintah ini hanya untuk Owner Elaina`, id)
                 bctxt = body.slice(4)
                 txtbc = `〘 *ZEUS BOT* 〙\n\n${bctxt}`
                 const semuagrup = await aruga.getAllChatIds();
