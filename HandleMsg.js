@@ -587,10 +587,10 @@ case 'detail':
                                 break
 case 'infoalamat':
         if (args.length == 0) return aruga.reply(from, `Untuk mencari suatu alamat\nUsage : ${prefix}infoalamat polresta`, id)
-        rugaapi.ingfo(body.slice(12))
+        rugaapi.ingfo(body.slice(17))
         .then(async(res) => {
-            const ingf = `*Alamat :* ${res.result.data}\n\n*Keterangan :* ${res.result.deskripsi}`
-            aruga.reply(from, ingf, id)
+            const ingfo = `*Alamat :* ${res.result.data}\n\n*Keterangan :* ${res.result.deskripsi}`
+            aruga.reply(from, ingfo, id)
         })
         .catch(() => {
             aruga.reply(from, 'Errorr...', id)
@@ -1514,7 +1514,7 @@ case 'setdesc':
         aruga.setGroupDescription(groupId, ganti)
         break
 case 'infogempa':
-const bmkg = await axios.get('https://api.vhtear.com/infogempa&apikey=BGah72936386gahwuHGay728').then(res => {
+const bmkg = await axios.get('https://api.vhtear.com/infogempa&apikey=${vhtearkey}').then(res => {
 const hasil = `*INFO GEMPA*\n*Lokasi* : _${res.data.lokasi}_\n*Kedalaman* : _${res.data.kedalaman}_\n*Koordinat* : _${res.data.koordinat}_\n*Magnitude* : _${res.data.magnitude}_\n*Waktu* : _${res.data.waktu}_\n${res.data.potensi}`;
 aruga.sendText(from, hasil, id)
 }) 
@@ -2011,7 +2011,7 @@ case 'blackpink':
                                 const query = body.slice(11)
                                 aruga.reply(from, mess.wait, id)
                                 try {
-                                    const response3 = await fetch(`https://api.vhtear.com/xxxsearch?query=${query}&apikey=BGah72936386gahwuHGay728`)
+                                    const response3 = await fetch(`https://api.vhtear.com/xxxsearch?query=${query}&apikey=${vhtearkey}`)
                                     if (!response3.ok) throw new Error(`unexpected response ${response3.statusText}`)
                                     const jsonxxx = await response3.json()
                                     const { result } = await jsonxxx
@@ -2031,7 +2031,7 @@ case 'ytsearch':
     const ytsher = body.slice(10)
     aruga.reply(from, mess.wait, id)
     try {
-        const response2 = await fetch(`https://api.vhtear.com/youtube?query=${encodeURIComponent(ytsher)}&apikey=BGah72936386gahwuHGay728`)
+        const response2 = await fetch(`https://api.vhtear.com/youtube?query=${encodeURIComponent(ytsher)}&apikey=${vhtearkey}`)
         if (!response2.ok) throw new Error(`unexpected response ${response2.statusText}`)
         const jsonserc = await response2.json()
         const { result } = await jsonserc
