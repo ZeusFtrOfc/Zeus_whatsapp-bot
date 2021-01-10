@@ -208,10 +208,10 @@ module.exports = HandleMsg = async (aruga, message) => {
       if (chats == 'Ajg'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
-      if (chats == 'AJG'){
+      if (chats == 'zeus'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
-      if (chats == 'pepek'){
+      if (chats == 'Zeus'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
       if (chats == 'Pepek'){
@@ -220,7 +220,7 @@ module.exports = HandleMsg = async (aruga, message) => {
       if (chats == 'Ppq'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
-      if (chats == 'PPQ'){
+      if (chats == 'Tolol'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
       if (chats == 'ngentot'){
@@ -436,13 +436,13 @@ module.exports = HandleMsg = async (aruga, message) => {
 	const apakah = [
             'Ya',
             'Tidak',
-            'Coba Ulangi'
+            'Ga tau'
             ]
 
         const bisakah = [
             'Bisa',
             'Tidak Bisa',
-            'Coba Ulangi'
+            'Ga tau'
             ]
 
         const kapan = [
@@ -582,7 +582,7 @@ case 'detail':
                                     await aruga.sendFileFromUrl(from, `${res.pdf_file}`, '', `${res.title}`, id)
                                 })
                                 .catch(() => {
-                                    aruga.reply(from, 'Error', id)
+                                    aruga.reply(from, 'Error kode tidak ditemukan!', id)
                                 })
                                 break
 case 'infoalamat':
@@ -629,7 +629,6 @@ case 'infoalamat':
             const bots = `Hi*${pushname}!*a, this is Zeus Bot, to find out the commands menu, type *${prefix}menu* , *${prefix}zeus*`
             await aruga.reply(from, bots , id)
             break
-        case 'p':
         case 'menu':
   case 'help':
 case 'zeus':
@@ -1076,6 +1075,7 @@ case 'nulis2':
                     })
             break
  case 'lovemessagetext':
+case 'lovetext':
     if (args.length == 0) return aruga.reply(from, `Membuat Text jadi Gambar lovemessage\nPemakaian: ${prefix}lovemessagetext [teks]\n\ncontoh: ${prefix}lovemessagetext Dimas D`, id)
                     await aruga.reply(from, `Wait....`, id)
                 console.log('Creating lovemessagetext text...')
@@ -1198,7 +1198,7 @@ case 'nulis2':
                 const mediaData = await decryptMedia(quotedMsg)
                 aruga.reply(from, `Sedang di proses! Silahkan tunggu sebentar...`, id)
                 const imageBase64 = `data:${quotedMsg.mimetype};base64,${mediaData.toString('base64')}`
-                await aruga.sendFile(from, imageBase64, 'imgsticker.jpg', 'Berhasil!1', id)
+                await aruga.sendFile(from, imageBase64, 'imgsticker.jpg', 'Success!!', id)
                 .then(() => {
                     console.log(`Sticker to Image Processed for ${processTime(t, moment())} Seconds`)
                 })
@@ -2005,26 +2005,28 @@ case 'blackpink':
                         console.error(err)
                         await aruga.reply(from, `Error!`, id)
                     })
-            break                           
- case 'xxxsearch':
-                                if (args.length === 0) return aruga.reply(from, `Search Video dari Website XXX\n\nContoh : ${prefix}xxxsearch blowjob`, id)
-                                const query = body.slice(11)
-                                aruga.reply(from, mess.wait, id)
-                                try {
-                                    const response3 = await fetch(`https://api.vhtear.com/xxxsearch?query=${query}&apikey=${vhtearkey}`)
-                                    if (!response3.ok) throw new Error(`unexpected response ${response3.statusText}`)
-                                    const jsonxxx = await response3.json()
-                                    const { result } = await jsonxxx
-                                    let awokawok = `*「 XXX SEARCH 」*\n\n*Hasil Pencarian : ${query}*\n`
-                                    for (let i = 0; i < result.length; i++) {
-                                        awokawok += `\n─────────────────\n\n• *Judul* : ${data[i].title}\n• *Durasi* : ${data[i].duration}\n\n• *Url* : _${data[i].url}_\n`
-                                    }
-                                    await aruga.sendFileFromUrl(from, awokawok, id)
-                                } catch (err) {
-                                    console.log(err)
-                                    await aruga.sendFileFromUrl(from, errorurl2, 'error.png', 'Maaf, Video tidak dapat ditemukan')
-                                }
-                                break 
+            break 
+                     
+
+case 'xxxsearch':
+    if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}ytsearch [ Query ]*, Contoh : ${prefix}xxxsearch blowjob`, id)
+    const query = body.slice(11)
+    aruga.reply(from, mess.wait, id)
+    try {
+        const response3 = await fetch(`https://api.vhtear.com/xxxsearch?query=${query}&apikey=${vhtearkey}`)
+        if (!response3.ok) throw new Error(`unexpected response ${response3.statusText}`)
+        const jsonxxx = await response3.json()
+        const { result } = await jsonxxx
+        let xixixi = `*「 XXX SEARCH 」*\n\n*Hasil Pencarian : ${query}*\n`
+        for (let i = 0; i < result.length; i++) {
+            xixixi += `\n─────────────────\n\n• *Judul* : ${data[i].title}\n• *Durasi* : ${data[i].duration}\n\n• *Url* : _${data[i].url}_\n`
+        }
+        await aruga.sendFileFromUrl(from, result[0].images, 'thumbquery.jpg', xixixi, id)
+    } catch (err) {
+            console.log(err)
+            await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Video tidak ditemukan')
+    }
+    break
 		       
 case 'ytsearch':
     if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}ytsearch [ Query ]*, Contoh : ${prefix}ytsearch alan walker alone`, id)
