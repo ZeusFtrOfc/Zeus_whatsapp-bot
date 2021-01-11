@@ -766,6 +766,104 @@ case 'zeus':
                 await aruga.sendFileFromUrl(from, errorurl2, 'error.png', ' Maaf, Soal Quiz tidak ditemukan')
            }
            break
+ case 'anoboy':
+                        await aruga.reply(from, mess.wait, id)
+                        rugaapi.anoboy()
+                            .then(async ({ result }) => {
+                                let anoboyInfo = '-----[ *ANOBOY ON-GOING* ]-----'
+                                for (let i = 0; i < result.length; i++) {
+                                    anoboyInfo += `\n\n➸ *Title*: ${result[i].title}\n➸ *URL*: ${result[i].url}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=`
+                                }
+                                await aruga.reply(from, anoboyInfo, id)
+                                console.log('Success sending on-going anime!')
+                            })
+                            .catch(async (err) => {
+                                console.error(err)
+                                await aruga.reply(from, 'Error!', id)
+                            })
+                    break
+                    case 'imagetourl':
+                        case 'imgtourl':
+                            if (isMedia && isImage || isQuotedImage) {
+                                await aruga.reply(from, mess.wait, id)
+                                const encryptMedia = isQuotedImage ? quotedMsg : message
+                                const mediaData = await decryptMedia(encryptMedia, uaOverride)
+                                const linkImg = await uploadImages(mediaData, `${sender.id}_img`)
+                                await aruga.reply(from, linkImg, id)
+                            } else {
+                                await aruga.reply(from, 'Format pesan salah...', id)
+                            }
+                        break
+                    case 'findsticker':
+                        case 'findstiker':
+                           if (args.length == 0) return aruga.reply(from, `Format pesan salah!\nContoh : ${prefix}findstiker gore`, id)
+                            await aruga.reply(from, mess.wait, id)
+                            try {
+                                rugaapi.sticker(args)
+                                    .then(async ({ result }) => {
+                                        if (result.response !== 200) return await aruga.reply(from, 'Not found!', id)
+                                        for (let i = 0; i < result.data.length; i++) {
+                                            await aruga.sendStickerfromUrl(from, result.data[i])
+                                        }
+                                        console.log('Success sending sticker!')
+                                    })
+                            } catch (err) {
+                                console.error(err)
+                                await aruga.reply(from, `Error!\n\n${err}`, id)
+                            }
+                        break
+ case 'missing':
+           if (args.length == 0) return aruga.reply(from, 'Format pesan salah')
+            const atas = q.substring(0, q.indexOf('|') - 1)
+            const tengah = q.substring(q.indexOf('|') + 2, q.lastIndexOf('|') - 1)
+            const bawah = q.substring(q.lastIndexOf('|') + 2)
+            if (isMedia && isImage || isQuotedImage) {
+                await aruga.reply(from, mess.wait, id)
+                const encryptMedia = isQuotedImage ? quotedMsg : message
+                const mediaData = await decryptMedia(encryptMedia, uaOverride)
+                const imageLink = await uploadImages(mediaData, `missing.${sender.id}`)
+                rugaapi.missing(atas, tengah, bawah, imageLink)
+                    .then(async ({ result }) => {
+                        await aruga.sendFileFromUrl(from, result.imgUrl, 'missing.jpg', '', id)
+                        console.log('Success sending image!')
+                    })
+                    .catch(async (err) => {
+                        console.error(err)
+                        await aruga.reply(from, 'Error!', id)
+                    })
+            } else {
+                await aruga.reply(from, 'Format pesan salah', id)
+            }
+        break
+ case 'stalktwit':
+            case 'stalktwitter':
+                if (args.length == 0) return aruga.reply(from, `Untuk men-stalk akun Burung Biru/Twitter seseorang\nketik ${prefix}stalktwit [username]\ncontoh : ${prefix}twitter anakbabi123`, id)
+                const stalkus = await rugaapi.stalktwit(args[0])
+                const sulkas = await rugaapi.burpot(args[0])
+                await aruga.sendFileFromUrl(from, sulkas, '', stalkus, id)
+                .catch(() => {
+                    aruga.reply(from, 'Maaf, username tidak ditemukan', id)
+                })
+                break
+        case 'myzodiac':
+            case 'myzodiak':
+                if (args.length == 0) return await aruga.reply(from, 'Format pesan salah', id)
+                await aruga.reply(from, mess.wait, id)
+                rugaapi.zodiak2(args[0])
+                    .then(async ({ result }) => {
+                        if (result.status === 204) {
+                            return await aruga.reply(from, result.ramalan, id)
+                        } else {
+                            let ramalan = `Zodiak: ${result.zodiak}\n\nRamalan: ${result.ramalan}\n\nAngka laksek: ${result.nomorKeberuntungan}\n\n${result.motivasi}\n\n${result.inspirasi}`
+                            await aruga.reply(from, ramalan, id)
+                                .then(() => console.log('Success sending zodiac fortune!'))
+                        }
+                    })
+                    .catch(async (err) => {
+                        console.error(err)
+                        await aruga.reply(from, 'Error!', id)
+                    })
+            break
         case 'caklontong':
             try {
             const resp = await axios.get('https://api.vhtear.com/funkuis&apikey=' + vhtearkey)
@@ -1240,6 +1338,28 @@ case 'hartatahta':
                         await aruga.reply(from, `Error!`, id)
                     })
             break
+ case 'msc':
+            if (args.length == 1) return aruga.reply(from, `Untuk mencari lagu dari youtube\n\nPenggunaan: #msc judul lagu`, id)
+            try {
+                aruga.reply(from, mess.wait, id)
+                const serplay = body.slice(6)
+                const webplay = await fetch(`https://api.vhtear.com/ytmp3?query=${serplay}&apikey=${vhtearkey}`)
+                if (!webplay.ok) throw new Error(`Error Play : ${webplay.statusText}`)
+                const webplay2 = await webplay.json()
+                 if (webplay2.status == false) {
+                    aruga.reply(from, `*Maaf Terdapat kesalahan saat mengambil data, mohon pilih media lain...*`, id)
+                } else {
+                    if (Number(webplay2.result.size.split(' MB')[0]) >= 20.00) return aruga.reply(from, 'Maaf durasi music sudah melebihi batas maksimal 20 MB!', id)
+                    const { image, mp3, size, ext, title, duration } = await webplay2.result
+                    const captplay = `*「 PLAY 」*\n\n• *Judul* : ${title}\n• *Durasi* : ${duration}\n• *Filesize* : ${size}\n• *Exp* : ${ext}\n\n_*Music Sedang Dikirim*_`
+                    aruga.sendFileFromUrl(from, image, `thumb.jpg`, captplay, id)
+                    await aruga.sendFileFromUrl(from, mp3, `${title}.mp3`, '', id).catch(() => tobz.reply(from, mess.error.Yt4, id))
+                                  }
+            } catch (err) {
+                aruga.sendText(ownerNumber, 'Error Play : '+ err)
+               aruga.reply(from, 'Jangan meminta lagu yang sama dengan sebelumnya!', id)
+            }
+            break 
         case 'sticker':
         case 'stiker':
             if ((isMedia || isQuotedImage) && args.length === 0) {
@@ -3196,7 +3316,7 @@ case 'nhview':
             })
             break
 case 'randomcry':
-            const scry = await axios.get('https://tobz-api.herokuapp.com/api/cry?apikey=' + tobzkey)
+            const scry = await axios.get('https://api.vhtear.com/cry?apikey=' + vhtearkey)
             const rcry = scry.data
             aruga.sendFileFromUrl(from, rcry.result, `RandomCry${ext}`, 'Random Cry!', id)
                   break
@@ -3243,7 +3363,7 @@ case 'randomcry':
 • Dropped: ${jikan.manga_stats.dropped}
 • Plan to Read: ${jikan.manga_stats.plan_to_read}`
 
-                awaitaruga.sendFileFromUrl(from, `${jikan.image_url}`,`user.png`, Data)
+                await aruga.sendFileFromUrl(from, `${jikan.image_url}`,`user.png`, Data)
                           } catch (err) {
                 console.log(err)
                 await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, User tidak ditemukan')
@@ -3296,7 +3416,7 @@ case 'malcharacter':
 
             const image = await bent("buffer")(image_url)
             const base64 = `data:image/jpg;base64,${image.toString("base64")}`
-            tobz.sendImage(from, base64, name, contentt)
+            aruga.sendImage(from, base64, name, contentt)
                       } catch (err) {
              console.error(err.message)
              await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Anime tidak ditemukan')
@@ -3317,7 +3437,7 @@ case 'malcharacter':
                
             } catch (err) {
                     console.log(err)
-                    await tobz.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Video tidak ditemukan')
+                    await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Video tidak ditemukan')
                    aruga.sendText(ownerNumber, 'Berita Error : ' + err)
             }
             break
@@ -3371,19 +3491,19 @@ case 'xnxx':
              if (args.length === 1) return aruga.reply(from, 'Kirim perintah *#xnxx [linkXnxx]*, untuk contoh silahkan kirim perintah *#readme*')
             if (!args[1].match(isUrl) && !args[1].includes('xnxx.com')) return aruga.reply(from, mess.error.Iv, id)
             try {
-                tobz.reply(from, mess.wait, id)
+                aruga.reply(from, mess.wait, id)
                 const resq = await axios.get('http://melodicxt.herokuapp.com/api/xnxx-downloader?url='+ args[1] +'&apiKey='+ melodickey)
                 const resp = resq.data
                  if (resp.error) {
                     aruga.reply(from, ytvv.error, id)
                 } else {
-                    if (Number(resp.result.size.split(' MB')[0]) > 20.00) return tobz.reply(from, 'Maaf durasi video sudah melebihi batas maksimal 20 menit!', id)
-                    tobz.sendFileFromUrl(from, resp.result.thumb, 'thumb.jpg', `➸ *Judul* : ${resp.result.judul}\n➸ *Deskripsi* : ${resp.result.desc}\n➸ *Filesize* : ${resp.result.size}\n\nSilahkan tunggu sebentar proses pengiriman file membutuhkan waktu beberapa menit.`, id)
+                    if (Number(resp.result.size.split(' MB')[0]) > 20.00) return aruga.reply(from, 'Maaf durasi video sudah melebihi batas maksimal 20 menit!', id)
+                    aruga.sendFileFromUrl(from, resp.result.thumb, 'thumb.jpg', `➸ *Judul* : ${resp.result.judul}\n➸ *Deskripsi* : ${resp.result.desc}\n➸ *Filesize* : ${resp.result.size}\n\nSilahkan tunggu sebentar proses pengiriman file membutuhkan waktu beberapa menit.`, id)
                     await aruga.sendFileFromUrl(from, resp.result.vid, `${resp.result.title}.mp4`, '', id)}
                                } catch (err) {
                 console.log(err)
                 await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Video tidak ditemukan')
-                tobz.sendText(ownerNumber, 'Xnxx Error : ' + err)
+                aruga.sendText(ownerNumber, 'Xnxx Error : ' + err)
             }
             break 
  case 'heroml':
@@ -3395,7 +3515,7 @@ case 'xnxx':
             aruga.sendFileFromUrl(from, resp.data.result.pictHero, 'hero.jpg', anm2, id)
                 } catch (err) {
                 console.error(err.message)
-                await tobz.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Hero tidak ditemukan')
+                await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Hero tidak ditemukan')
                 aruga.sendText(ownerNumber, 'Heroml Error : ' + err)
            }
             break
@@ -3409,7 +3529,7 @@ case 'xnxx':
                       } catch (err) {
                 console.error(err.message)
                 await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Nomor Hoki tidak ditemukan')
-                tobz.sendText(ownerNumber, 'Nomorhoki Error : ' + err)
+                aruga.sendText(ownerNumber, 'Nomorhoki Error : ' + err)
            }
             break
  case 'twitterstalk':
