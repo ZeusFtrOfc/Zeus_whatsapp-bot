@@ -3369,6 +3369,27 @@ case 'randomcry':
                 await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, User tidak ditemukan')
             }    
             break
+case 'fml':
+            const fmlx = await rugaapi.fml()
+            await aruga.reply(from, fmlx, id)
+            .catch(() => {
+                aruga.reply(from, 'Hayolohhh, ada yang error!!', id)
+            })
+            break
+ case 'memeindo':
+            const memeindox = await rugaapi.memeindo()
+            await aruga.sendFileFromUrl(from, memeindox, 'memeindo.jpeg', 'Nih.....', id)
+            .catch(() => {
+                aruga.reply(from, 'Hayolohhh, ada yang error!!', id)
+            })
+            break
+        case 'darkjokes':
+            const darkjokesx = await rugaapi.darkjokes()
+            await aruga.sendFileFromUrl(from, darkjokesx, 'memeindo.jpeg', 'Nih.....', id)
+            .catch(() => {
+                aruga.reply(from, 'Hayolohhh, ada yang error!!', id)
+            })
+            break
  case 'malanime':
             const keyword = message.body.replace('#malanime', '')
             try {
@@ -3458,6 +3479,19 @@ case 'malcharacter':
                     await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Video tidak ditemukan')
                     aruga.sendText(ownerNumber, 'Berita Error : ' + err)
             }
+            break
+case 'joox':
+             if (args.length === 1) return aruga.reply(from, `Kirim perintah *#joox [ Optional ]*\nContoh : *#joox Alan Walker*`, id)
+            aruga.reply(from, mess.wait, id)
+            rugaapi.joox(args[1]).then(async(res) => {
+                let { penyanyi, judul, album, linkImg, linkMp3, filesize, ext, duration } = await res
+                let tjoox = `*「 JOOX DOWNLOADER 」*\n\n➸ *Penyanyi:* ${penyanyi}\n➸ *Judul:* ${judul}\n➸ *Album:* ${album}\n➸ *Ext:* ${ext}\n➸ *Size:* ${filesize}\n➸ *Durasi:* ${duration}\n\n_Silahkan tunggu sebentar proses pengiriman file membutuhkan waktu beberapa menit._`
+                aruga.sendImage(from, linkImg, judul, tjoox)
+               aruga.sendFileFromUrl(from, linkMp3, `${judul}.${ext}`, '', id).catch(() => aruga.reply(from, mess.error.Yt4, id))
+                        }).catch((err) => {
+                console.log(err);
+                aruga.reply(from, `Maaf, Terjadi Kesalahan`, id)
+            })
             break
 case 'ssphone':
                if (args.length === 1) return aruga.reply(from, 'Kirim perintah *#ssphone [linkWeb]*\nContoh : *#ssphone https://neonime.vip*', id)
