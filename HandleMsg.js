@@ -3457,6 +3457,319 @@ case 'malcharacter':
              await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Anime tidak ditemukan')
            }
           break
+case 'stickdaun':
+	if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+	      const daunnyas = await fetch(`https://api-zeks.harispoppy.com/api/leavest?text=${body.slice(11)}&apikey=apivinz`)
+		  const dauns = await daunnyas.json()
+		  aruga.sendStickerfromUrl(from, dauns.result)
+		  break
+	case 'stickmatrix':
+		if (args.length === 0) return aruga.reply(dari, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const matrixnyas = await fetch(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=matrix&text=${body.slice(13)}&apiKey=administrator`)
+	        const matrixs = await matrixnya.json()
+			aruga.sendStickerfromUrl(dari, matrixs.result)
+			break
+	case 'stickawan':
+			if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const awannyas = await fetch(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=sky_online&text=${body.slice(11)}&apiKey=administrator`)
+	        const awans = await awannyas.json()
+			aruga.sendStickerfromUrl(from, awans.result)
+			break
+	case 'sticktechno':
+		if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+		aruga.reply(from, mess.wait, id)
+			const technonyas = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=neon_technology&text=${body.slice(13)}&apikey=BotWeA`)
+			const technos = await technonyas.json()
+			aruga.sendStickerfromUrl(from, technos.result)
+			break
+case 'stickdarcula':
+	       if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)	
+	     const darculanyas = `https://carbonnowsh.herokuapp.com/?code=${body.slice(14)}&theme=darcula&backgroundColor=rgba(50, 50, 50, 150)`
+	      aruga.sendFileFromUrl(from, darculanyas)
+	     break
+	case 'sticklava':
+		if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const lavanya = `https://arugaz.my.id/api/textpro/lavatext?text=${body.slice(10)}`
+			aruga.sendStickerfromUrl(from, lavanya)
+			break
+	case 'stickequal':
+		if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const equalnya = `ttps://arugaz.my.id/api/textpro/equalizer?text=${body.slice(11)}`
+			aruga.sendStickerfromUrl(from, equalnya)
+			break
+	case 'stickracun':
+		if (args.length === 1) return aruga.reply(dari, 'Teksnya mana??', id)
+			aruga.reply(dari, mess.wait, id)
+	    const racunnya = `https://arugaz.my.id/api/textpro/toxictext?text=${body.slice(11)}`
+		aruga.sendStickerfromUrl(dari, racunnya)
+			break
+	case 'stickbokeh':
+		if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const bokehnya = `https://arugaz.my.id/api/textpro/bokehtext?text=${body.slice(11)}`
+			aruga.sendStickerfromUrl(from, bokehnya)
+			break
+	case 'stickgneon':
+		if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const gneonnya = `https://arugaz.my.id/api/textpro/greenneon?text=${body.slice(11)}`
+			aruga.sendStickerfromUrl(from, gneonnya,)
+			break
+	case 'stickpro':
+	if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const oldnyah = `https://arugaz.my.id/api/textpro/old1917?text=${body.slice(9)}`
+			aruga.sendStickerfromUrl(from, oldnyah)
+			break
+	case 'stickholo':
+		if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const holonyai = `https://arugaz.my.id/api/textpro/holographic?text=${body.slice(10)}`
+			aruga.sendStickerfromUrl(from, holonyai)
+			break
+	case 'stickglue':
+		if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			arugay.reply(from, mess.wait, id)
+			const gluenyaj = `https://arugaz.my.id/api/textpro/glue3d?text=${body.slice(10)}`
+			aruga.sendStickerfromUrl(from, gluenyaj)
+			break
+case 'stickph':
+ arg = body.trim().split(' ')
+			aruga.reply(from, mess.wait, id)
+			const ph9 = arg[1]
+			const ph7 = arg[2]
+			const phnyi = `http://docs-jojo.herokuapp.com/api/phblogo?text1=${ph3}&text2=${ph4}`
+			aruga.sendStickerfromUrl(from, phnyi)
+            break
+	case 'sticksunset':
+                   const suns = body.slice(13)
+                    const sunset = `http://nzcha-api.herokuapp.com/styletext/senja?text1=${suns}`
+                    aruga.sendStickerfromUrl(from, sunset.result)
+                    break
+case 'sticknatal':
+   if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textnatals = body.slice(11)
+		 const natals = await fetch(`https://api-zeks.harispoppy.com/api/crismes?text=${textnatals}&apikey=apivinz`)
+		 const natalnyas = await natals.json()
+		 aruga.sendStickerfromUrl(from, natalnyas.result)
+		 break
+    case 'sticklion':
+	     if (args.length === 1) return aruga.reply(from, 'Teks nya mana??', id)
+		 if (args.length === 2) return aruga.reply(from, 'Silahkan ketik #sticklion text1 text2 Contoh #sticklion Benny Ganteng', id)
+		 arg = body.trim().split(' ')
+		 aruga.reply(dari, mess.wait, id)
+		 const textlions = arg[1]
+		 const liontexts = arg[2]
+		 const lions = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=lionlogo&text1=${textlions}&text2=${liontexts}&apikey=BotWeA`)
+		 const lionnyas = await lions.json()
+		 aruga.sendStickerfromUrl(from, lionnyas.result)
+		 break
+	case 'sticksnow':
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const snownyas = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=snow&text=${body.slice(11)}&apikey=BotWeA`)
+		const snows = await snownyas.json()
+		aruga.sendStickerfromUrl(from, snows.result)
+		break
+case 'stickblood':
+	   if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textbloods = body.slice(12)
+		 const bloods = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=blood&text=${textblood}&apikey=BotWeA`)
+		 const bloodnyas = await bloods.json()
+		 aruga.sendStickerfromUrl(from, bloodnyas.result)
+		 break
+	case 'stickpantai':
+	   if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		aruga.reply(from, mess.wait, id)
+		 const textpantais = body.slice(13)
+		 const pantais = await fetch(`https://api-zeks.harispoppy.com/api/tpantai?text=${textpantais}&apikey=apivinz`)
+		 const pantainyas = await pantais.json()
+		 aruga.sendStickerfromUrl(from, pantainyas.result)
+		 break
+	case 'stickwater':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textwaters = body.slice(12)
+		 const waters = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=dropwater&text=${textwaters}&apikey=BotWeA`)
+		 const waternyas = await waters.json()
+		 aruga.sendStickerfromUrl(from, waternyas.result)
+		 break
+    case 'stickjoker':
+	   if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		aruga.reply(from, mess.wait, id)
+		 const textjokers = body.slice(12)
+		 const jokers = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=jokerlogo&text=${textjoker}&apikey=BotWeA`)
+		 const jokernyas = await jokers.json()
+		 aruga.sendStickerfromUrl(from, jokernyas.result)
+		 break
+	case 'stickgaming':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+	   aruga.reply(from, mess.wait, id)
+		const gamenyas = body.slice(13)
+		 const gamings = await fetch(`https://api-jojo.herokuapp.com/api/gaming?text=${gamenyas}`)
+		 const gamnyas = await gamings.json()
+		 aruga.sendStickerfromUrl(from, gamnyas.result)
+		 break
+	case 'stickmetal':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const metalnyas = `https://arugaz.my.id/api/textpro/metaldark?text=${body.slice(12)}`
+		aruga.sendStickerfromUrl(from, metalnyas)
+		break
+	case 'stickwroom':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const wroomnyas = `https://arugaz.my.id/api/flamingtext/wroom?text=${body.slice(12)}`
+		aruga.sendStickerfromUrl(from, wroomnyas)
+		break
+	case 'stikerpatrick':
+		case 'stickerpatrick':
+	        const pati = ['https://ibb.co/cbQS7Tx','https://ibb.co/HpFMhqq','https://ibb.co/DMYpBJy','https://ibb.co/4KtL6VZ','https://ibb.co/VSkKVdY','https://ibb.co/GxgsMFf','https://ibb.co/hHSC82g','https://ibb.co/jWnW0XG','https://ibb.co/Vw9FjPq','https://ibb.co/s24LJ9P','https://ibb.co/7j07dGL','https://ibb.co/n3DgpV1','https://ibb.co/1z4Hk0Y','https://ibb.co/2WNykDP','https://ibb.co/5v9sHsX']
+	     aruga.reply(from, mess.wait, id)
+		 let patri = pati[Math.floor(Math.random() * pati.length)]
+	     aruga.sendStickerfromUrl(from, patri)
+		 break
+	case 'randomsticker':
+case 'randomstiker':
+	const walnimeo = ['https://camo.githubusercontent.com/9c184e56a76795eaeb8e7584424520de07a9aa4db57323f626ef9ff7730f62b9/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f34644d3155373661415133646245366263332f67697068792e676966','https://camo.githubusercontent.com/0afcc6050ce6d1858e1f8136ad418fadea998a0188ae20364504ed6c9bbb6b2c/68747470733a2f2f696d61676573352e616c706861636f646572732e636f6d2f3931312f3931313631342e706e67','https://raw.githubusercontent.com/mhankbarbar/whatsapp-bot/master/media/img/Kaguya.png','https://images.alphacoders.com/605/thumb-350-605592.png','https://images5.alphacoders.com/481/thumb-350-481903.png','https://images7.alphacoders.com/611/thumb-350-611138.png','https://images4.alphacoders.com/476/thumb-350-47698.png','https://images2.alphacoders.com/727/thumb-350-72732.png','https://images5.alphacoders.com/314/thumb-350-314574.png','https://cdn.nekos.life/wallpaper/QwGLg4oFkfY.png','https://cdn.nekos.life/wallpaper/bUzSjcYxZxQ.jpg','https://cdn.nekos.life/wallpaper/j49zxzaUcjQ.jpg','https://cdn.nekos.life/wallpaper/YLTH5KuvGX8.png','https://cdn.nekos.life/wallpaper/Xi6Edg133m8.jpg','https://cdn.nekos.life/wallpaper/qvahUaFIgUY.png','https://cdn.nekos.life/wallpaper/leC8q3u8BSk.jpg','https://cdn.nekos.life/wallpaper/tSUw8s04Zy0.jpg','https://cdn.nekos.life/wallpaper/sqsj3sS6EJE.png','https://cdn.nekos.life/wallpaper/HmjdX_s4PU4.png','https://cdn.nekos.life/wallpaper/Oe2lKgLqEXY.jpg','https://cdn.nekos.life/wallpaper/GTwbUYI-xTc.jpg','https://cdn.nekos.life/wallpaper/nn_nA8wTeP0.png','https://cdn.nekos.life/wallpaper/Q63o6v-UUa8.png','https://cdn.nekos.life/wallpaper/ZXLFm05K16Q.jpg','https://cdn.nekos.life/wallpaper/cwl_1tuUPuQ.png','https://cdn.nekos.life/wallpaper/wWhtfdbfAgM.jpg','https://cdn.nekos.life/wallpaper/3pj0Xy84cPg.jpg','https://cdn.nekos.life/wallpaper/sBoo8_j3fkI.jpg','https://cdn.nekos.life/wallpaper/gCUl_TVizsY.png','https://cdn.nekos.life/wallpaper/LmTi1k9REW8.jpg','https://cdn.nekos.life/wallpaper/sbq_4WW2PUM.jpg','https://cdn.nekos.life/wallpaper/QOSUXEbzDQA.png','https://cdn.nekos.life/wallpaper/khaqGIHsiqk.jpg','https://cdn.nekos.life/wallpaper/iFtEXugqQgA.png','https://cdn.nekos.life/wallpaper/deFKIDdRe1I.jpg','https://cdn.nekos.life/wallpaper/OHZVtvDm0gk.jpg','https://cdn.nekos.life/wallpaper/YZYa00Hp2mk.jpg','https://cdn.nekos.life/wallpaper/R8nPIKQKo9g.png','https://cdn.nekos.life/wallpaper/_brn3qpRBEE.jpg','https://cdn.nekos.life/wallpaper/ADTEQdaHhFI.png','https://cdn.nekos.life/wallpaper/MGvWl6om-Fw.jpg','https://cdn.nekos.life/wallpaper/YGmpjZW3AoQ.jpg','https://cdn.nekos.life/wallpaper/hNCgoY-mQPI.jpg','https://cdn.nekos.life/wallpaper/3db40hylKs8.png','https://cdn.nekos.life/wallpaper/iQ2FSo5nCF8.jpg','https://cdn.nekos.life/wallpaper/meaSEfeq9QM.png','https://cdn.nekos.life/wallpaper/CmEmn79xnZU.jpg','https://cdn.nekos.life/wallpaper/MAL18nB-yBI.jpg','https://cdn.nekos.life/wallpaper/FUuBi2xODuI.jpg','https://cdn.nekos.life/wallpaper/ez-vNNuk6Ck.jpg','https://cdn.nekos.life/wallpaper/K4-z0Bc0Vpc.jpg','https://cdn.nekos.life/wallpaper/Y4JMbswrNg8.jpg','https://cdn.nekos.life/wallpaper/ffbPXIxt4-0.png','https://cdn.nekos.life/wallpaper/x63h_W8KFL8.jpg','https://cdn.nekos.life/wallpaper/lktzjDRhWyg.jpg','https://cdn.nekos.life/wallpaper/j7oQtvRZBOI.jpg','https://cdn.nekos.life/wallpaper/MQQEAD7TUpQ.png','https://cdn.nekos.life/wallpaper/lEG1-Eeva6Y.png','https://cdn.nekos.life/wallpaper/Loh5wf0O5Aw.png','https://cdn.nekos.life/wallpaper/yO6ioREenLA.png','https://cdn.nekos.life/wallpaper/4vKWTVgMNDc.jpg','https://cdn.nekos.life/wallpaper/Yk22OErU8eg.png','https://cdn.nekos.life/wallpaper/Y5uf1hsnufE.png','https://cdn.nekos.life/wallpaper/xAmBpMUd2Zw.jpg','https://cdn.nekos.life/wallpaper/f_RWFoWciRE.jpg','https://cdn.nekos.life/wallpaper/Y9qjP2Y__PA.jpg','https://cdn.nekos.life/wallpaper/eqEzgohpPwc.jpg','https://cdn.nekos.life/wallpaper/s1MBos_ZGWo.jpg','https://cdn.nekos.life/wallpaper/PtW0or_Pa9c.png','https://cdn.nekos.life/wallpaper/32EAswpy3M8.png','https://cdn.nekos.life/wallpaper/Z6eJZf5xhcE.png','https://cdn.nekos.life/wallpaper/xdiSF731IFY.jpg','https://cdn.nekos.life/wallpaper/Y9r9trNYadY.png','https://cdn.nekos.life/wallpaper/8bH8CXn-sOg.jpg','https://cdn.nekos.life/wallpaper/a02DmIFzRBE.png','https://cdn.nekos.life/wallpaper/MnrbXcPa7Oo.png','https://cdn.nekos.life/wallpaper/s1Tc9xnugDk.jpg','https://cdn.nekos.life/wallpaper/zRqEx2gnfmg.jpg','https://cdn.nekos.life/wallpaper/PtW0or_Pa9c.png','https://cdn.nekos.life/wallpaper/0ECCRW9soHM.jpg','https://cdn.nekos.life/wallpaper/kAw8QHl_wbM.jpg','https://cdn.nekos.life/wallpaper/ZXcaFmpOlLk.jpg','https://cdn.nekos.life/wallpaper/WVEdi9Ng8UE.png','https://cdn.nekos.life/wallpaper/IRu29rNgcYU.png','https://cdn.nekos.life/wallpaper/LgIJ_1AL3rM.jpg','https://cdn.nekos.life/wallpaper/DVD5_fLJEZA.jpg','https://cdn.nekos.life/wallpaper/siqOQ7k8qqk.jpg','https://cdn.nekos.life/wallpaper/CXNX_15eGEQ.png','https://cdn.nekos.life/wallpaper/s62tGjOTHnk.jpg','https://cdn.nekos.life/wallpaper/tmQ5ce6EfJE.png','https://cdn.nekos.life/wallpaper/Zju7qlBMcQ4.jpg','https://cdn.nekos.life/wallpaper/CPOc_bMAh2Q.png','https://cdn.nekos.life/wallpaper/Ew57S1KtqsY.jpg','https://cdn.nekos.life/wallpaper/hVpFbYJmZZc.jpg','https://cdn.nekos.life/wallpaper/sb9_J28pftY.jpg','https://cdn.nekos.life/wallpaper/JDoIi_IOB04.jpg','https://cdn.nekos.life/wallpaper/rG76AaUZXzk.jpg','https://cdn.nekos.life/wallpaper/9ru2luBo360.png','https://cdn.nekos.life/wallpaper/ghCgiWFxGwY.png','https://cdn.nekos.life/wallpaper/OSR-i-Rh7ZY.png','https://cdn.nekos.life/wallpaper/65VgtPyweCc.jpg','https://cdn.nekos.life/wallpaper/3vn-0FkNSbM.jpg','https://cdn.nekos.life/wallpaper/u02Y0-AJPL0.jpg','https://cdn.nekos.life/wallpaper/_-Z-0fGflRc.jpg','https://cdn.nekos.life/wallpaper/3VjNKqEPp58.jpg','https://cdn.nekos.life/wallpaper/NoG4lKnk6Sc.jpg','https://cdn.nekos.life/wallpaper/xiTxgRMA_IA.jpg','https://cdn.nekos.life/wallpaper/yq1ZswdOGpg.png','https://cdn.nekos.life/wallpaper/4SUxw4M3UMA.png','https://cdn.nekos.life/wallpaper/cUPnQOHNLg0.jpg','https://cdn.nekos.life/wallpaper/zczjuLWRisA.jpg','https://cdn.nekos.life/wallpaper/TcxvU_diaC0.png','https://cdn.nekos.life/wallpaper/7qqWhEF_uoY.jpg','https://cdn.nekos.life/wallpaper/J4t_7DvoUZw.jpg','https://cdn.nekos.life/wallpaper/xQ1Pg5D6J4U.jpg','https://cdn.nekos.life/wallpaper/aIMK5Ir4xho.jpg','https://cdn.nekos.life/wallpaper/6gneEXrNAWU.jpg','https://cdn.nekos.life/wallpaper/PSvNdoISWF8.jpg','https://cdn.nekos.life/wallpaper/SjgF2-iOmV8.jpg','https://cdn.nekos.life/wallpaper/vU54ikOVY98.jpg','https://cdn.nekos.life/wallpaper/QjnfRwkRU-Q.jpg','https://cdn.nekos.life/wallpaper/uSKqzz6ZdXc.png','https://cdn.nekos.life/wallpaper/AMrcxZOnVBE.jpg','https://cdn.nekos.life/wallpaper/N1l8SCMxamE.jpg','https://cdn.nekos.life/wallpaper/n2cBaTo-J50.png','https://cdn.nekos.life/wallpaper/ZXcaFmpOlLk.jpg','https://cdn.nekos.life/wallpaper/7bwxy3elI7o.png','https://cdn.nekos.life/wallpaper/7VW4HwF6LcM.jpg','https://cdn.nekos.life/wallpaper/YtrPAWul1Ug.png','https://cdn.nekos.life/wallpaper/1p4_Mmq95Ro.jpg','https://cdn.nekos.life/wallpaper/EY5qz5iebJw.png','https://cdn.nekos.life/wallpaper/aVDS6iEAIfw.jpg','https://cdn.nekos.life/wallpaper/veg_xpHQfjE.jpg','https://cdn.nekos.life/wallpaper/meaSEfeq9QM.png','https://cdn.nekos.life/wallpaper/Xa_GtsKsy-s.png','https://cdn.nekos.life/wallpaper/6Bx8R6D75eM.png','https://cdn.nekos.life/wallpaper/zXOGXH_b8VY.png','https://cdn.nekos.life/wallpaper/VQcviMxoQ00.png','https://cdn.nekos.life/wallpaper/CJnRl-PKWe8.png','https://cdn.nekos.life/wallpaper/zEWYfFL_Ero.png','https://cdn.nekos.life/wallpaper/_C9Uc5MPaz4.png','https://cdn.nekos.life/wallpaper/zskxNqNXyG0.jpg','https://cdn.nekos.life/wallpaper/g7w14PjzzcQ.jpg','https://cdn.nekos.life/wallpaper/KavYXR_GRB4.jpg','https://cdn.nekos.life/wallpaper/Z_r9WItzJBc.jpg','https://cdn.nekos.life/wallpaper/Qps-0JD6834.jpg','https://cdn.nekos.life/wallpaper/Ri3CiJIJ6M8.png','https://cdn.nekos.life/wallpaper/ArGYIpJwehY.jpg','https://cdn.nekos.life/wallpaper/uqYKeYM5h8w.jpg','https://cdn.nekos.life/wallpaper/h9cahfuKsRg.jpg','https://cdn.nekos.life/wallpaper/iNPWKO8d2a4.jpg','https://cdn.nekos.life/wallpaper/j2KoFVhsNig.jpg','https://cdn.nekos.life/wallpaper/z5Nc-aS6QJ4.jpg','https://cdn.nekos.life/wallpaper/VUFoK8l1qs0.png','https://cdn.nekos.life/wallpaper/rQ8eYh5mXN8.png','https://cdn.nekos.life/wallpaper/D3NxNISDavQ.png','https://cdn.nekos.life/wallpaper/Z_CiozIenrU.jpg','https://cdn.nekos.life/wallpaper/np8rpfZflWE.jpg','https://cdn.nekos.life/wallpaper/ED-fgS09gik.jpg','https://cdn.nekos.life/wallpaper/AB0Cwfs1X2w.jpg','https://cdn.nekos.life/wallpaper/DZBcYfHouiI.jpg','https://cdn.nekos.life/wallpaper/lC7pB-GRAcQ.png','https://cdn.nekos.life/wallpaper/zrI-sBSt2zE.png','https://cdn.nekos.life/wallpaper/_RJhylwaCLk.jpg','https://cdn.nekos.life/wallpaper/6km5m_GGIuw.png','https://cdn.nekos.life/wallpaper/3db40hylKs8.png','https://cdn.nekos.life/wallpaper/oggceF06ONQ.jpg','https://cdn.nekos.life/wallpaper/ELdH2W5pQGo.jpg','https://cdn.nekos.life/wallpaper/Zun_n5pTMRE.png','https://cdn.nekos.life/wallpaper/VqhFKG5U15c.png','https://cdn.nekos.life/wallpaper/NsMoiW8JZ60.jpg','https://cdn.nekos.life/wallpaper/XE4iXbw__Us.png','https://cdn.nekos.life/wallpaper/a9yXhS2zbhU.jpg','https://cdn.nekos.life/wallpaper/jjnd31_3Ic8.jpg','https://cdn.nekos.life/wallpaper/Nxanxa-xO3s.png','https://cdn.nekos.life/wallpaper/dBHlPcbuDc4.jpg','https://cdn.nekos.life/wallpaper/6wUZIavGVQU.jpg','https://cdn.nekos.life/wallpaper/_-Z-0fGflRc.jpg','https://cdn.nekos.life/wallpaper/H9OUpIrF4gU.jpg','https://cdn.nekos.life/wallpaper/xlRdH3fBMz4.jpg','https://cdn.nekos.life/wallpaper/7IzUIeaae9o.jpg','https://cdn.nekos.life/wallpaper/FZCVL6PyWq0.jpg','https://cdn.nekos.life/wallpaper/5dG-HH6d0yw.png','https://cdn.nekos.life/wallpaper/ddxyA37HiwE.png','https://cdn.nekos.life/wallpaper/I0oj_jdCD4k.jpg','https://cdn.nekos.life/wallpaper/ABchTV97_Ts.png','https://cdn.nekos.life/wallpaper/58C37kkq39Y.png','https://cdn.nekos.life/wallpaper/HMS5mK7WSGA.jpg','https://cdn.nekos.life/wallpaper/1O3Yul9ojS8.jpg','https://cdn.nekos.life/wallpaper/hdZI1XsYWYY.jpg','https://cdn.nekos.life/wallpaper/h8pAJJnBXZo.png','https://cdn.nekos.life/wallpaper/apO9K9JIUp8.jpg','https://cdn.nekos.life/wallpaper/p8f8IY_2mwg.jpg','https://cdn.nekos.life/wallpaper/HY1WIB2r_cE.jpg','https://cdn.nekos.life/wallpaper/u02Y0-AJPL0.jpg','https://cdn.nekos.life/wallpaper/jzN74LcnwE8.png','https://cdn.nekos.life/wallpaper/IeAXo5nJhjw.jpg','https://cdn.nekos.life/wallpaper/7lgPyU5fuLY.jpg','https://cdn.nekos.life/wallpaper/f8SkRWzXVxk.png','https://cdn.nekos.life/wallpaper/ZmDTpGGeMR8.jpg','https://cdn.nekos.life/wallpaper/AMrcxZOnVBE.jpg','https://cdn.nekos.life/wallpaper/ZhP-f8Icmjs.jpg','https://cdn.nekos.life/wallpaper/7FyUHX3fE2o.jpg','https://cdn.nekos.life/wallpaper/CZoSLK-5ng8.png','https://cdn.nekos.life/wallpaper/pSNDyxP8l3c.png','https://cdn.nekos.life/wallpaper/AhYGHF6Fpck.jpg','https://cdn.nekos.life/wallpaper/ic6xRRptRes.jpg','https://cdn.nekos.life/wallpaper/89MQq6KaggI.png','https://cdn.nekos.life/wallpaper/y1DlFeHHTEE.png']
+		   aruga.reply(from, mess.wait, id)
+		   let walnimeok = walnimeo[Math.floor(Math.random() * walnimeo.length)]
+		   aruga.sendStickerfromUrl(from, walnimeok)
+		   break
+case 'textawan':
+	case 'teksawan':
+	if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
+			aruga.reply(from, mess.wait, id)
+			const awannya = await fetch(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=sky_online&text=${body.slice(10)}&apiKey=administrator`)
+	        const awan = await awannya.json()
+			aruga.sendFileFromUrl(from, awan.result, 'awan.jpg', 'Anjay bah', id)
+			break
+	case 'textcolor':
+	case 'tekscolor':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		aruga.reply(from, mess.wait, id)
+		 const textcolor = body.slice(11)
+		 const color = await fetch(`https://api-zeks.harispoppy.com/api/colortext?text=${textcolor}&apikey=apivinz`)
+		 const colornya = await color.json()
+		 aruga.sendFile(from, colornya.result, 'color.jpg', 'Anjay bah', id)
+		 break
+	case 'textfire':
+	case 'teksfire':
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textfire = body.slice(10)
+		 const fire = await fetch(`https://api-zeks.harispoppy.com/api/tfire?text=${textfire}&apikey=apivinz`)
+		 const firenya = await fire.json()
+		 aruga.sendFile(from, firenya.result, 'color.jpg', 'Anjay bah', id)
+		 break
+	case 'textgrafiti':
+	case 'teksgrafiti':
+	      if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		aruga.reply(from, mess.wait, id)
+		 const textgrafiti = body.slice(13)
+		 const grafiti = await fetch(`https://api-zeks.harispoppy.com/api/grafiti?text=${textgrafiti}&apikey=apivinz`)
+		 const grafitinya = await grafiti.json()
+		 aruga.sendFile(from, grafitinya.result, 'grafiti.jpg', 'Anjay bah', id)
+		 break
+	case 'textblood':
+	case 'teksblood':
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textblood = body.slice(11)
+		 const blood = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=blood&text=${textblood}&apikey=BotWeA`)
+		 const bloodnya = await blood.json()
+		aruga.sendFile(from, bloodnya.result, 'blood.jpg', 'Anjay bah', id)
+		 break
+	case 'textpantai':
+	case 'tekspantai':
+	      if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textpantai = body.slice(12)
+		 const pantai = await fetch(`https://api-zeks.harispoppy.com/api/tpantai?text=${textpantai}&apikey=apivinz`)
+		 const pantainya = await pantai.json()
+		 aruga.sendFile(from, pantainya.result, 'pantai.jpg', 'Anjay bah', id)
+		 break
+	case 'textwater':
+	case 'tekswater':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textwater = body.slice(11)
+		 const water = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=dropwater&text=${textwater}&apikey=BotWeA`)
+		 const waternya = await water.json()
+		aruga.sendFile(from, waternya.result, 'water.jpg', 'Anjay bah', id)
+		 break
+    case 'textjoker':
+	case 'teksjoker':
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		aruga.reply(from, mess.wait, id)
+		 const textjoker = body.slice(11)
+		 const joker = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=jokerlogo&text=${textjoker}&apikey=BotWeA`)
+		 const jokernya = await joker.json()
+		 aruga.sendFile(from, jokernya.result, 'joker.jpg', 'Anjay bah', id)
+		 break
+	case 'textgaming':
+	case 'teksgaming':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+	  aruga.reply(from, mess.wait, id)
+		const gamenya = body.slice(12)
+		 const gaming = await fetch(`https://api-jojo.herokuapp.com/api/gaming?text=${gamenya}`)
+		 const gamnya = await gaming.json()
+		 aruga.sendFile(from, gamnya.result, 'gaming.jpg', 'Anjay bah', id)
+		 break
+	case 'textmetal':
+	case 'teksmetal':
+	   if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const metalnya = `https://arugaz.my.id/api/textpro/metaldark?text=${body.slice(11)}`
+		aruga.sendFileFromUrl(from, metalnya, 'metal.jpg', 'Anjay bah', id)
+		break
+	case 'textwroom':
+	case 'tekswroom':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const wroomnya = `https://arugaz.my.id/api/flamingtext/wroom?text=${body.slice(11)}`
+		aruga.sendFileFromUrl(from, wroomnya, 'wroom.jpg', 'Anjay bah', id)
+		break
+	case 'text3d2':
+	case 'teks3d2':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const t3d2nya = `https://arugaz.my.id/api/flamingtext/text3d?text=${body.slice(9)}`
+		aruga.sendFileFromUrl(from, t3d2nya, 'metal.jpg', 'Anjay bah', id)
+		break
+	case 'textfwater':
+	case 'teksfwater':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const fwaternya = `ttps://arugaz.my.id/api/flamingtext/water?text=${body.slice(12)}`
+		aruga.sendFileFromUrl(from, fwaternya, 'metal.jpg', 'Anjay bah', id)
+		break
+	case 'textbird':
+	case 'teksbird':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const birdnya = `https://arugaz.my.id/api/flamingtext/blackbird?text=${body.slice(10)}`
+		aruga.sendFileFromUrl(from, birdnya, 'metal.jpg', 'Anjay bah', id)
+		break
+	case 'textsmurf':
+	case 'tekssmurf':
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const smurfnya = `https://arugaz.my.id/api/flamingtext/smurf?text=${body.slice(11)}`
+		aruga.sendFileFromUrl(from, smurfnya, 'metal.jpg', 'Anjay bah', id)
+		break
+	case 'textmemo':
+	case 'teksmemo':
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const memonya = `https://arugaz.my.id/api/flamingtext/memories?text=${body.slice(10)}`
+		aruga.sendFileFromUrl(from, memonya, 'metal.jpg', 'Anjay bah', id)
+		break
+case 'stickfire':
+	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		 aruga.reply(from, mess.wait, id)
+		 const textfires = body.slice(11)
+		 const fires = await fetch(`https://api-zeks.harispoppy.com/api/tfire?text=${textfire}&apikey=apivinz`)
+		 const firenyas = await fires.json()
+		 aruga.sendStickerfromUrl(from, firenyas.result)
+		 break
  case 'newstickerline':
             aruga.reply(from, mess.wait, id)
             try {
@@ -3542,7 +3855,7 @@ case 'ssphone':
            aruga.sendFileFromUrl(from, `https://api.vhtear.com/ssweb?link=${sspc}&type=pc&apikey=${vhtearkey}`, 'sspc.jpg', '', id)
             break 
 case 'bitly':
-            if (args.length === 1) return aruga.reply(from, 'Kirim perintah *#bitly [linkWeb]*\nContoh : *#bitly https://neonime.vip*', id)
+            if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#bitly [linkWeb]*\nContoh : *#bitly https://neonime.vip*', id)
             const shorturl1 = body.slice(7)
             const bitly1 = await axios.get('https://tobz-api.herokuapp.com/api/bitly?url=' + shorturl1 + '&apikey=' + tobzkey)
             const bitly2 = bitly1.data
@@ -3551,7 +3864,7 @@ case 'bitly':
             aruga.sendText(from, surl2, id)
                        break
         case 'tinyurl':
-            if (args.length === 1) return aruga.reply(from, 'Kirim perintah *#shorturl [linkWeb]*\nContoh : *#shorturl https://neonime.vip*', id)
+            if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#shorturl [linkWeb]*\nContoh : *#shorturl https://neonime.vip*', id)
             const shorturl2 = body.slice(9)
             const tiny1 = await axios.get('https://tobz-api.herokuapp.com/api/shorturl?url=' + shorturl2 + '&apikey=' + tobzkey)
             const tiny2 = tiny1.data
