@@ -235,6 +235,36 @@ module.exports = HandleMsg = async (aruga, message) => {
       if (chats == 'anjg'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
+      if (chats == 'jancok'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'coli'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Permisi'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'permisi'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'Coli'){
+          aruga.sendPtt(from, './media.astg.mp3', id)
+      }
+      if (chats == 'Burik'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'burik'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Jancok'){
+          aruga.sendPtt(from, './media.astg.mp3', id)
+      }
+      if (chats == 'ewe'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Ewe'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
       if (chats == 'anjing'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
@@ -250,6 +280,12 @@ module.exports = HandleMsg = async (aruga, message) => {
       if (chats == 'Halo'){
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
+      if (chats == 'Tes'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'tes'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
       if (chats == 'halo'){
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
@@ -259,7 +295,22 @@ module.exports = HandleMsg = async (aruga, message) => {
       if (chats == 'kak'){
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
- if (chats == 'Bg'){
+      if (chats == 'punten'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'Punten'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'Zeus?'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+       if (chats == 'gajelas'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'Gajelas'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'Bg'){
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
       if (chats == 'bg'){
@@ -416,39 +467,39 @@ module.exports = HandleMsg = async (aruga, message) => {
         ]
         const cecan = [
             {
-            lahwoi : "Bini gua yang ke 1",
+            lahwoi : "Nih...",
             imagex : "https://i.ibb.co/VT4ggGj/Instagram.jpg",
             },
             {
-            lahwoi : "Bini gua yang ke 2",
+            lahwoi : "Nih...",
             imagex : "https://i.ibb.co/x1nD1HD/Instagram-1.jpg",
             },
             {
-            lahwoi : "Bini gua yang ke 3",
+            lahwoi : "Nih...",
             imagex : "https://i.ibb.co/ZXPPFKF/Argumentasi-Dimensi.jpg",
             },
             {
-            lahwoi : "Bini gua yang ke 4",   
+            lahwoi : "Nih...",   
             imagex : "https://i.ibb.co/NpY5ZBR/image.jpg",
             },
             {
-            lahwoi : "Bini gua yang ke 5",
+            lahwoi : "Nih...",
             imagex : "https://i.ibb.co/PWsL6HF/download-1.jpg",
             },
             {
-            lahwoi : "Bini gua yang ke 6",
+            lahwoi : "Nih...",
             imagex :"https://i.ibb.co/JFkDWjB/RASANYA-ANJING-BANGET.jpg",
             },
             {
-            lahwoi : "Bini gua yang ke 7",
+            lahwoi : "Nih...",
             imagex : "https://i.ibb.co/5W2gMq6/download-2.jpg",
             },
             {
-            lahwoi : "Bini gua yang ke 8",
+            lahwoi : "Nih...",
             imagex : "https://i.ibb.co/QNWhdgC/download-3.jpg",
             },
             {
-            lahwoi : "Bini gua yang terakhir",
+            lahwoi : "Nih...",
             imagex : "https://i.ibb.co/RS1vWC3/Blur.jpg"
             }
         ]
@@ -576,6 +627,7 @@ module.exports = HandleMsg = async (aruga, message) => {
 	   let bokepio = bokepi[Math.floor(Math.random() * bokepi.length)]
 		  aruga.sendStickerfromUrl(from, bokepio)
 		   break
+
     case 'randomgif':
 	case 'rgif':
 	  aruga.reply(from, mess.wait, id)
@@ -640,9 +692,9 @@ if (args.length == 0) return aruga.reply(from, 'Nomornya mana??', id)
      break 
 case 'infoloker': 
      aruga.reply(from, mess.wait, id);
- const lokernya = await fetch('https://api-melodicxt.herokuapp.com/api/infoloker?&apiKey=administrator')
+ const lokernya = await fetch('http://docs-jojo.herokuapp.com/api/infoloker')
 			 const lokr = await lokernya.json()
-			 aruga.reply(from, `➸ *Perusahaan* : ${lokr.result.perusahaan} \n➸ *Deskripsi* : ${lokr.result.desc} \n➸ *Edukasi* : ${lokr.result.edukasi} \n➸ *Lokasi* : ${lokr.result.lokasi} \n➸ *Gaji* : ${lokr.result.gaji} \n➸ *Syarat* : ${lokr.result.syarat} \n➸ *Pengalaman* : ${lokr.result.pengalaman} \n➸ *Level Karir* : ${lokr.levelKarir} \n➸ *Profesi* : ${lokr.result.profesi} \n➸ *Job Function* : ${lokr.result.jobFunction} \n➸ *Link* : ${lokr.result.link}`, id)
+			aruga.reply(from, `➸ *Perusahaan* : ${lokr.result.perusahaan} \n➸ *Deskripsi* : ${lokr.result.desc} \n➸ *Edukasi* : ${lokr.result.edukasi} \n➸ *Lokasi* : ${lokr.result.lokasi} \n➸ *Gaji* : ${lokr.result.gaji} \n➸ *Syarat* : ${lokr.result.syarat} \n➸ *Pengalaman* : ${lokr.result.pengalaman} \n➸ *Level Karir* : ${lokr.result.levelKarir} \n➸ *Profesi* : ${lokr.result.profesi} \n➸ *Job Function* : ${lokr.result.jobFunction} \n➸ *Link* : ${lokr.result.link}`, id)
 			 break
 case 'wa.me':
         case 'wame':
@@ -681,7 +733,8 @@ case 'trendingtwit':
                             console.error(err)
                             await aruga.reply(from, 'Error!', id)
                         })
-                        break 
+                        break
+
 case 'github':
 	case 'githubstalk':
                 if (args.length == 0) return aruga.reply(from, `Untuk men-stalk akun Github seseorang\nKetik : ${prefix}github [username]\nContoh : ${prefix}github ZeusFtrOfc`, id)
@@ -692,6 +745,16 @@ case 'github':
                     aruga.reply(from, 'Username salah, silahkan masukkan username yang benar', id)
                 })
                 break
+case 'iri':
+		case 'Iri':
+		    aruga.sendPtt(from, './media/iri.mp3', id)
+			break
+case 'antivirtex':
+case 'antivirtek':
+if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
+            if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
+            			return await aruga.reply(from, `\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://youtube.com/c/bennyhidayat\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`, id)
+			break
 	 case 'stalkig':
 case 'igstalk':
          
@@ -847,13 +910,35 @@ case 'zeus':
                 aruga.reply(from, 'ada yang error!!', id)
             })
             break
+case 'brainly':
+             if (args.length >= 2){
+                const BrainlySearch = require('./lib/brainly')
+                let tanya = body.slice(9)
+                let jum = Number(tanya.split('.')[1]) || 2
+                if (jum > 10) return  aruga.reply(from, 'Max 10!', id)
+                if (Number(tanya[tanya.length-1])){
+                    tanya
+                }
+                aruga.reply(from, `➸ *Pertanyaan* : ${tanya.split('.')[0]}\n\n➸ *Jumlah jawaban* : ${Number(jum)}`, id)
+                await BrainlySearch(tanya.split('.')[0],Number(jum), function(res){
+                    res.forEach(x=>{
+                        if (x.jawaban.fotoJawaban.length == 0) {
+                            aruga.reply(from, `➸ *Pertanyaan* : ${x.pertanyaan}\n\n➸ *Jawaban* : ${x.jawaban.judulJawaban}\n`, id)
+                                                } else {
+                           aruga.reply(from, `➸ *Pertanyaan* : ${x.pertanyaan}\n\n➸ *Jawaban* 〙: ${x.jawaban.judulJawaban}\n\n➸ *Link foto jawaban* : ${x.jawaban.fotoJawaban.join('\n')}`, id)
+                                                }
+                    })
+                })
+            } else {
+                aruga.reply(from, 'Usage :\n#brainly [pertanyaan] [.jumlah]\n\nEx : \n#brainly NKRI .2', id)
+            }
+            break
+      	
  case 'lirik':
-            if (args.length == 0) return aruga.reply(from, `Untuk mencari suatu lirik lagu\nketik: ${prefix}lirik [lirik lagu]`, id)
-            const lrkp = body.slice(11)
-            const lrks = await rugaapi.lirik(lrkp)
-            await aruga.reply(from, lrks, id)
-            .catch(() => {
-                aruga.reply(from, 'ada yang error!!', id)
+            if (args.length == 0) return aruga.reply(from, `Untuk mencari lirik dari sebuah lagu\bketik: ${prefix}lirik [judul_lagu]`, id)
+            rugaapi.lirik(body.slice(7))
+            .then(async (res) => {
+                await aruga.reply(from, `Lirik Lagu: ${body.slice(7)}\n\n${res}`, id)
             })
             break
         case 'logopornhub':
@@ -1550,6 +1635,8 @@ case 'hartatahta':
             break 
         case 'sticker':
         case 'stiker':
+case 'setiker':
+case 'seticker':
             if ((isMedia || isQuotedImage) && args.length === 0) {
                 const encryptMedia = isQuotedImage ? quotedMsg : message
                 const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
@@ -1628,7 +1715,7 @@ case 'text3d':
                 await aruga.reply(from, `Wait....`, id)
                 console.log('Creating text3d text...')
                 const ltext3d = body.slice(8)
-                await aruga.sendFileFromUrl(from, `https://docs-jojo.herokuapp.com/api/text3d?text=${ltext3d}`, '', 'Nih...', id)
+                await aruga.sendFileFromUrl(from, `https://arugaz.my.id/api/textpro/text3d?text=${ltext3d}`, '', 'Nih...', id)
                     .then(() => console.log('Success creting image!'))
                     .catch(async (err) => {
                         console.error(err)
@@ -1741,6 +1828,8 @@ case 'glowtext':
 break
              case 'stickergif':
         case 'stikergif':
+case 'gifstiker':
+case 'gifsticker':
             if (isMedia || isQuotedVideo) {
                 if (mimetype === 'video/mp4' && message.duration < 10 || mimetype === 'image/gif' && message.duration < 10) {
                     var mediaData = await decryptMedia(message, uaOverride)
@@ -2026,20 +2115,7 @@ break
                     }
                     break;
         //Media 
-         case 'ytmp4':
-if (args.length == 0) return aruga.reply(from, `Untuk mendownload vidio dari youtube\nketik: ${prefix}ytmp4 [link_yt]`, id)
-                const linkmp4 = args[0].replace('https://youtu.be/','').replace('https://www.youtube.com/watch?v=','')
-                rugaapi.ytmp4(`https://youtu.be/${linkmp4}`)
-                .then(async(res) => {
-                    if (res.error) return aruga.sendFileFromUrl(from, `${res.url}`, '', `${res.error}`)
-                    await aruga.sendFileFromUrl(from, `${res.result.imgUrl}`, '', `Video ditemukan\n\nJudul: ${res.result.title}\nSize: ${res.result.size}\n\nSabar sedang di prosesss....`, id)
-                    await aruga.sendFileFromUrl(from, `${res.result.UrlVideo}`, '', '', id)
-                    .catch(() => {
-                        aruga.reply(from, `URL INI ${args[0]} SUDAH PERNAH DI DOWNLOAD SEBELUMNYA ..URL AKAN RESET SETELAH 60 MENIT`, id)
-                    })
-                })
-                break
-            case 'jadwalbola':
+              case 'jadwalbola':
             aruga.reply(from, mess.wait, id)
             try {
                 const jdbola = await fetch(`https://api.vhtear.com/jadwalbola&apikey=${vhtearkey}`)
@@ -2196,28 +2272,27 @@ case 'ss':
                 aruga.reply(from, `Maaf, Terjadi Kesalahan`, id)
             })
             break
-case 'moddroid':
-           if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#moddroid [query]*\nContoh : *#moddroid pubg*', id)
-           
-              try {
-                     const moddroid = await axios.get('https://tobz-api.herokuapp.com/api/moddroid?q=' + body.slice(10)  + '&apikey=BotWeA')
+   case 'moddroid':
+           if (args.length == 0) return aruga.reply(from, 'Kirim perintah *#moddroid [query]*\nContoh : *#moddroid pou*', id)
+            try {
+                const moddroid = await axios.get('https://tobz-api.herokuapp.com/api/moddroid?q=' + body.slice(10)  + '&apikey=BotWeA')
                 if (moddroid.data.error) return aruga.reply(from, moddroid.data.error, id)
                 const modo = moddroid.data.result[0]
                 const resmod = `• *Title* : ${modo.title}\n• *Publisher* : ${modo.publisher}\n• *Size* : ${modo.size}\n• *MOD Info* : ${modo.mod_info}\n• *Version* : ${modo.latest_version}\n• *Genre* : ${modo.genre}\n• *Link* : ${modo.link}\n• *Download* : ${modo.download}`
-               aruga.sendFileFromUrl(from, modo.image, 'MODDROID.jpg', resmod, id)
-                        } catch (err) {
+                aruga.sendFileFromUrl(from, modo.image, 'MODDROID.jpg', resmod, id)
+            } catch (err) {
                 console.log(err)
             }
             break
         case 'happymod':
-             if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#happymod [query]*\nContoh : *#happymod pubg*', id)
-try {
-          const happymod = await axios.get('https://tobz-api.herokuapp.com/api/happymod?q=' + body.slice(10)  + '&apiKey=BotWeA')
+             if (args.length == 0) return aruga.reply(from, 'Kirim perintah *#happymod [query]*\nContoh : *#happymod pou*', id)
+            try {
+                const happymod = await axios.get('https://tobz-api.herokuapp.com/api/happymod?q=' + body.slice(10)  + '&apikey=BotWeA')
                 if (happymod.data.error) return aruga.reply(from, happymod.data.error, id)
                 const modo = happymod.data.result[0]
                 const resmod = `• *Title* : ${modo.title}\n• *Purchase* : ${modo.purchase}\n• *Size* : ${modo.size}\n• *Root* : ${modo.root}\n• *Version* : ${modo.version}\n• *Price* : ${modo.price}\n• *Link* : ${modo.link}\n• *Download* : ${modo.download}`
                 aruga.sendFileFromUrl(from, modo.image, 'HAPPYMOD.jpg', resmod, id)
-                        } catch (err) {
+            } catch (err) {
                 console.log(err)
             }
             break
@@ -2265,14 +2340,9 @@ try {
                 const dice = Math.floor(Math.random() * 6) + 1
                 await aruga.sendStickerfromUrl(from, 'https://www.random.org/dice/dice' + dice + '.png', { method: 'get' })
                 break
-case 'spamcall':
-                if (args.length !== 1) return aruga.reply(from, `Untuk menggunakan fitur spamcall, ketik :\n${prefix}spamcall 8xxxxxxxxxx\n\nContoh: ${prefix}spamcall 81288888888`, id)
-                rugaapi.spamcall(args[0])
-                .then(async (res) => {
-                    await aruga.reply(from, `${res}`, id)
-                })
-                break
+
             case 'spamcall2':
+case 'spamcall':
                 if (args.length !== 1) return aruga.reply(from, `Untuk menggunakan fitur spamcall, ketik :\n${prefix}spamcall 8xxxxxxxxxx\n\nContoh: ${prefix}spamcall 81288888888`, id)
                 rugaapi.spamcall2(args[0])
                 .then(async (res) => {
@@ -2331,6 +2401,7 @@ case 'ytsearch':
             await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Video tidak ditemukan')
     }
     break
+
 			
 		//Primbon Menu
 		case 'cekzodiak':
@@ -2357,19 +2428,7 @@ case 'ytsearch':
 			break
 			
         // Random Kata
-      	case 'motivasi':
-            fetch('https://raw.githubusercontent.com/selyxn/motivasi/main/motivasi.txt')
-            .then(res => res.text())
-            .then(body => {
-                let splitmotivasi = body.split('\n')
-                let randommotivasi = splitmotivasi[Math.floor(Math.random() * splitmotivasi.length)]
-                aruga.reply(from, randommotivasi, id)
-            })
-            .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
-            })
-            break
-	      case 'urgay':
+      	      case 'urgay':
   case 'howgay':
         		if (args.length == 0) return aruga.reply(from, `Untuk mengetahui seberapa gay seseorang gunakan ${prefix}howgay namanya\n\nContoh: ${prefix}howgay burhan`, id)
             fetch('https://raw.githubusercontent.com/MrPawNO/howgay/main/howgay.txt')
@@ -2396,6 +2455,7 @@ case 'ytsearch':
             })
             break
         case 'katabijak':
+case 'motivasi':
             fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/katabijax.txt')
             .then(res => res.text())
             .then(body => {
@@ -2408,6 +2468,7 @@ case 'ytsearch':
             })
 break
         case 'fakboy':
+case 'bucin':
             fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/pantun.txt')
             .then(res => res.text())
             .then(body => {
@@ -2419,16 +2480,10 @@ break
                 aruga.reply(from, 'Ada yang Error!', id)
             })
             break
+
         case 'quote':
             const quotex = await rugaapi.quote()
             await aruga.reply(from, quotex, id)
-            .catch(() => {
-                aruga.reply(from, 'Ada yang Error!', id)
-            })
-            break
-case 'bucin':
-            const cinq = await rugaapi.bucin()
-            await aruga.reply(from, cinq, id)
             .catch(() => {
                 aruga.reply(from, 'Ada yang Error!', id)
             })
@@ -2458,6 +2513,13 @@ case 'fucklife':
 			    	await aruga.reply(from, res.result, id)
 		      	})
 		      	break
+case 'bucin2':
+		      	rugaapi.bucin2()
+		      	.then(async (res) => {
+			    	await aruga.reply(from, res.result, id)
+		      	})
+		      	break
+
 
         //Random Images
         case 'anime':
@@ -2561,6 +2623,7 @@ case 'fucklife':
                 aruga.reply(from, 'Ada yang Error!', id)
             })
             break
+
         case 'cuaca':
             if (args.length == 0) return aruga.reply(from, `Untuk melihat cuaca pada suatu daerah\nketik: ${prefix}cuaca [daerah]`, id)
             const cuacaq = body.slice(7)
@@ -2604,6 +2667,19 @@ case 'ytmp3'://silahkan kalian custom sendiri jika ada yang ingin diubah
                aruga.reply(from, 'Jangan meminta lagu yang sama dengan sebelumnya!', id)
             }
             break 
+case 'ytmp4'://silahkan kalian custom sendiri jika ada yang ingin diubah
+ if (args.length == 0) return aruga.reply(from, `Untuk mendownload vidio dari youtube\nketik: ${prefix}ytmp4 [link_yt]`, id)
+                      const linkmp4 = args[0].replace('https://youtu.be/','').replace('https://www.youtube.com/watch?v=','')
+                rugaapi.ytmp4(`https://youtu.be/${linkmp4}`)
+                .then(async(res) => {
+                    if (res.error) return aruga.sendFileFromUrl(from, `${res.url}`, '', `${res.error}`)
+                    await aruga.sendFileFromUrl(from, `${res.result.imgUrl}`, '', `Video ditemukan\n\nJudul: ${res.result.title}\nSize: ${res.result.size}\n\nSabar sedang di prosesss....`, id)
+                    await aruga.sendFileFromUrl(from, `${res.result.UrlVideo}`, '', '', id)
+                    .catch(() => {
+                        aruga.reply(from, `Maaf server sedang error!`, id)
+                    })
+                })
+                break
   case 'mapz'://by aqulz
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}mapz [optional]*, Contoh : *${prefix}maps Jakarta*`, id)
             const mapz = body.slice(6)
@@ -2645,6 +2721,7 @@ case 'ytmp3'://silahkan kalian custom sendiri jika ada yang ingin diubah
                 await aruga.reply(from, `Wrong Format!\n[❗] Kirim perintah *${prefix}wolf2 [ |Teks1|Teks2 ]*, contoh *${prefix}wolf2 |Zeus|ZeusBot*`, id)
             }
             break
+	
     case 'wolf'://by aqulzz
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}wolf [ |Teks1|Teks2 ]*, contoh *${prefix}wolf |Zeus|ZeusBot*`, id)
             argz = body.trim().split('|')
@@ -2893,6 +2970,7 @@ case 'delete':
            }
             break
         case 'tahta':
+case 'harta':
              const jreng = body.slice(7)
              if (!jreng) return aruga.reply(from, `Kirim perintah *${prefix}tahta [teks]*\n\nContoh *${prefix}tahta Zeus*`, id)
              if (jreng.length > 7) return aruga.reply(from, 'Maksimal 7 Huruf!', id)
@@ -2935,8 +3013,9 @@ case 'delete':
                 }
             break
         case 'bot':
+if (args.length == 0) return aruga.reply(from, 'Menu buat bicara gajelas gan,\nContoh: #bot halo', id)
            const que = body.slice(6)
-            const sigo = await axios.get(`https://st4rz.herokuapp.com/api/simsimi?kata=${que}`)
+            const sigo = await axios.get(`https://tobz-api.herokuapp.com/api/simsimi?text=${que}&apikey=BotWeA`)
             const sigot = sigo.data
             aruga.reply(from, sigot.result, id)
             console.log(sigot)
@@ -3054,11 +3133,10 @@ case 'setprofile':
 
         //Owner Bot
        case 'ban':
-		if (isBanned) return await aruga.reply(from, `Maaf, Nomor kamu telah dibanned!`, id)
-        if (!isOwnerB) return await aruga.reply(from, 'Fitur ini hanya dapat digunakan oleh admin bot')
+		    if (!isOwnerB) return await aruga.reply(from, 'Fitur ini hanya dapat digunakan oleh admin bot')
                        if (mentionedJidList.length === 0) return await aruga.reply(from, `Format salah!`, id)
         if (mentionedJidList[0] === botNumber) return await aruga.reply(from, `Format salah!`, id)
-            const allMemek = await benny.getGroupMembers(groupId)
+            const allMemek = await aruga.getGroupMembers(groupId)
 			 for (let i = 0; i < mentionedJidList.length; i++)
                     ban.push(mentionedJidList[i])
                     fs.writeFileSync('./settings/banned.json', JSON.stringify(ban))
@@ -3066,8 +3144,7 @@ case 'setprofile':
             break
     case 'unban':
 case 'ban del':
-		if (isBanned) return await aruga.reply(from, `Maaf, Nomor kamu telah dibanned!`, id)
-       if (!isOwnerB) return await aruga.reply(from, 'Fitur ini hanya dapat digunakan oleh admin bot')
+		 if (!isOwnerB) return await aruga.reply(from, 'Fitur ini hanya dapat digunakan oleh admin bot')
                                if (mentionedJidList.length === 0) return await aruga.reply(from, `Format salah!`, id)
                 if (mentionedJidList[0] === botNumber) return await aruga.reply(from, `Format salah!`, id)
                 let benet = ban.indexOf(mentionedJidList[0])
@@ -3078,7 +3155,7 @@ case 'ban del':
             case 'google':
                  aruga.reply(from, mess.wait, id)
             const googleQuery = body.slice(8)
-            if(googleQuery == undefined || googleQuery == ' ') return aruga.reply(from, `*Hasil Pencarian : ${googleQuery}* tidak ditemukan`, id)
+            if(googleQuery == false || googleQuery == ' ') return aruga.reply(from, `*Hasil Pencarian : ${googleQuery}* tidak ditemukan`, id)
             google({ 'query': googleQuery }).then(results => {
             let vars = `_*Hasil Pencarian : ${googleQuery}*_\n`
             for (let i = 0; i < results.length; i++) {
@@ -3296,6 +3373,7 @@ case 'kutuk':
                 break
             case 'me':
 case 'my':
+ if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                 if (isBanned) return false
                 if (isGroupMsg) {
                     if (!quotedMsg) {
@@ -3389,7 +3467,6 @@ case 'neonime':
             const base64 = `data:image/jpg;base64,${image.toString("base64")}`
             await aruga.sendImage(from, base64, 'ptrs.jpg', `*Image*\n\n*Hasil Pencarian : ${ptrsq}*`)
                break
-
 case 'nhview':
               if (args.length === 1) return aruga.reply(from, 'Kirim perintah *#nhview [212121]*\nContoh : *#nhview 321421*', id)
             const nhsh = body.slice(11)
@@ -3414,6 +3491,8 @@ case 'nhview':
             }
             break
  case 'maluser':
+ if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
+               
            const username = body.slice(18)
             aruga.reply(from, mess.wait, id)
             try {
@@ -3707,32 +3786,6 @@ case 'randomstiker':
 		   let walnimeok = walnimeo[Math.floor(Math.random() * walnimeo.length)]
 		   aruga.sendStickerfromUrl(from, walnimeok)
 		   break
-case 'textawan':
-	case 'teksawan':
-	if (args.length === 0) return aruga.reply(from, 'Teksnya mana??', id)
-			aruga.reply(from, mess.wait, id)
-			const awannya = await fetch(`https://arugaz.my.id/api/textpro/lavatext?text=${body.slice(10)}`)
-	        const awan = await awannya.json()
-			aruga.sendFileFromUrl(from, awan.result, 'awan.jpg', 'Nih...', id)
-			break
-	case 'textcolor':
-	case 'tekscolor':
-	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
-		aruga.reply(from, mess.wait, id)
-		 const textcolor = body.slice(11)
-		 const color = await fetch(`https://api.zeks.xyz/api/colortext?text=${textcolor}&apikey=apivinz`)
-		 const colornya = await color.json()
-		 aruga.sendFileFromUrl(from, colornya.result, 'color.jpg', 'Nih...', id)
-		 break
-	case 'textfire':
-	case 'teksfire':
-	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
-		 aruga.reply(from, mess.wait, id)
-		 const textfire = body.slice(10)
-		 const fire = await fetch(`https://api.vhtear.com/fire_maker?text=${textfire}&apikey=${vhtearkey}`)
-		 const firenya = await fire.json()
-		 aruga.sendFileFromUrl(from, firenya.result, 'fire.jpg', 'Nih...', id)
-		 break
 	case 'textgrafiti':
 	case 'teksgrafiti':
 	      if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
@@ -3751,26 +3804,7 @@ case 'textawan':
 		 const bloodnya = await blood.json()
 		aruga.sendFileFromUrl(from, bloodnya.result, 'blood.jpg', 'Nih...', id)
 		 break
-	case 'textpantai':
-	case 'tekspantai':
-	      if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
-		 aruga.reply(from, mess.wait, id)
-		 const textpantai = body.slice(12)
-		 const pantai = await fetch(`https://api.zeks.xyz/api/tpantai?text=${textpantai}&apikey=apivinz`)
-		 const pantainya = await pantai.json()
-		 aruga.sendFileFromUrl(from, pantainya.result, 'pantai.jpg', 'Nih...', id)
-		 break
-	case 'textwater':
-	case 'tekswater':
-	    if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
-		 aruga.reply(from, mess.wait, id)
-		 const textwater = body.slice(11)
-		 const water = await fetch(`https://tobz-api.herokuapp.com/api/textpro?theme=dropwater&text=${textwater}&apikey=BotWeA`)
-		 const waternya = await water.json()
-		aruga.sendFileFromUrl(from, waternya.result, 'water.jpg', 'Nih...', id)
-		 break
-    case 'textjoker':
-	case 'teksjoker':
+		case 'teksjoker':
 	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
 		aruga.reply(from, mess.wait, id)
 		 const textjoker = body.slice(11)
@@ -3873,6 +3907,7 @@ case 'stickfire':
             }
             break
  case 'news':
+case 'cnn':
            aruga.reply(from, mess.wait, id)
             try {
                 const response2 = await fetch(`https://api.vhtear.com/beritaterbaru&apikey=${vhtearkey}`)
@@ -3890,10 +3925,12 @@ case 'stickfire':
                     aruga.sendText(ownerNumber, 'Berita Error : ' + err)
             }
             break
+ 
 case 'goldpb':
+case 'goldbp':
                 if (args.length == 0) return aruga.reply(from, `Bot akan mengirimkan Gold Play Button dengan nama yang kalian custom sendiri\nContoh : ${prefix}goldpb Urbaee`, id)
                 const yuza = body.slice(8)
-                await axios.get(`https://api.zeks.xyz/api/gplaybutton?text=${yuza}&apikey=benbenz`).then(res => {
+                await axios.get(`https://api.zeks.xyz/api/gplaybutton?text=${yuza}&apikey=apivinz`).then(res => {
                     console.log('Getting Picture');
                     aruga.sendFileFromUrl(from, `${res.data.result}`, 'image.jpg', 'Congratsss for 1 Million Subscribers', id)
                     })
@@ -3902,9 +3939,10 @@ case 'goldpb':
                 })
                 break
             case 'silverpb':
+case 'silverbp':
                 if (args.length == 0) return aruga.reply(from, `Bot akan mengirimkan Silver Play Button dengan kata yang anda masukkan\nContoh : ${prefix}silverpb Urbaee`, id)
                 const yuzu = body.slice(10)
-                await axios.get(`https://api.zeks.xyz/api/splaybutton?text=${yuzu}&apikey=benbenz`).then(res => {
+                await axios.get(`https://api.zeks.xyz/api/splaybutton?text=${yuzu}&apikey=apivinz`).then(res => {
                     aruga.sendFileFromUrl(from, `${res.data.result}`, 'image.jpg', 'Congratss!!', id)
                     .catch(() => {
                         aruga.reply(from, 'Error ngab', id)
