@@ -4,19 +4,18 @@ const options = require('./utils/options')
 const { color, messageLog } = require('./utils')
 const HandleMsg = require('./HandleMsg')
 
-const start = (aruga = new Client()) => {
-    console.log(color(figlet.textSync('----------------', { horizontalLayout: 'default' })))
-    console.log(color(figlet.textSync('ZEUS BOT', { font: 'Ghost', horizontalLayout: 'default' })))
-    console.log(color(figlet.textSync('----------------', { horizontalLayout: 'default' })))
+   const start = (aruga = new Client()) => {
+    console.log(color(figlet.textSync('<<---------->>', { horizontalLayout: 'default' })))
+    console.log(color(figlet.textSync('ZEUS BOT', { horizontalLayout: 'fullt' })))
+    console.log(color(figlet.textSync('<<---------->>', { horizontalLayout: 'default' })))
     console.log(color('[DEV]'), color('Zeus', 'yellow'))
     console.log(color('[~>>]'), color('BOT Started!', 'green'))
 
     // Mempertahankan sesi agar tetap nyala
     aruga.onStateChanged((state) => {
-        console.log(color('[~>>]', 'red'), state)
+        console.log(color('[SERVER]', 'red'), state)
         if (state === 'CONFLICT' || state === 'UNLAUNCHED') aruga.forceRefocus()
     })
-
     // ketika bot diinvite ke dalam group
     aruga.onAddedToGroup(async (chat) => {
 	const groups = await aruga.getAllGroups()
