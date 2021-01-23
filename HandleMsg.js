@@ -858,7 +858,7 @@ case 'weather':
         break
 case 'cekjodoh2':
         if (args.length == 0) return aruga.reply(from, `Untuk mengecek jodoh\nUsage : ${prefix}cekjodoh2 zeus janda`, id)
-        rugaapi.virgin(body.slice(10))
+        rugaapi.virgin(args[0],args[1])
         .then(async(res) => {
             const virgin = `*Hasil :* ${res.result.hasil}\n\nBy : Zeus`
             aruga.reply(from, virgin, id)
@@ -867,11 +867,19 @@ case 'cekjodoh2':
             aruga.reply(from, 'Errorr...', id)
         })
         break
+case 'harijadi':
+        if (args.length == 0) return aruga.reply(from, `Untuk mengecek arti harijadi\nUsage : ${prefix}harijadi 16 08 2019`, id)
+       const putus = await rugaapi.putus(args[0],args[1],args[2])
+            await aruga.reply(from, putus, id)
+            .catch(() => {
+                aruga.reply(from, 'Ada yang Error!', id)
+            })
+            break
 case 'lirik2':
         if (args.length == 0) return aruga.reply(from, `Untuk mencari lirik lagu\nUsage : ${prefix}lirik2 sayang`, id)
-        rugaapi.lirik2(body.slice(10))
+        rugaapi.lirik2(body.slice(7))
         .then(async(res) => {
-            const lirik2 = `*Hasil :* ${res.result.result}\n\nBy : Zeus`
+            const lirik2 = `Lirik Lagu: ${body.slice(7)}\n\n${res.result.result}\n\nBy : Zeus`
             aruga.reply(from, lirik2, id)
         })
         .catch(() => {
@@ -994,7 +1002,7 @@ case 'brainly':
             break
       	
  case 'lirik':
-            if (args.length == 0) return aruga.reply(from, `Untuk mencari lirik dari sebuah lagu\bketik: ${prefix}lirik [judul_lagu]`, id)
+            if (args.length == 0) return aruga.reply(from, `Untuk mencari lirik dari sebuah lagu\bketik: ${prefix}lirik2 [judul_lagu]`, id)
             rugaapi.lirik(body.slice(7))
             .then(async (res) => {
                 await aruga.reply(from, `Lirik Lagu: ${body.slice(7)}\n\n${res}`, id)
@@ -1066,7 +1074,7 @@ case 'pornhub':
             const resp = await axios.get('https://api.vhtear.com/tebakgambar&apikey=' + vhtearkey)
             if (resp.data.error) return aruga.reply(from, resp.data.error, id)
             const anm2 = `➸ Soal : ${resp.data.result.soal}\n\n➸ Poin : ${resp.data.result.poin}`
-            const jwban = `➸ Jawaban : ${resp.data.result.jawaban}`
+            const jwban = `➸ Jawaban : ${resp.data.result.jawaban}\n\nBy : Zeus`
             aruga.sendFileFromUrl(from, resp.data.result.soalImg, 'tebakgambar.jpg', '_Silahkan Jawab Maksud Dari Gambar Ini_', id)
             aruga.sendText(from, `wait....`, id)
             await sleep(20500)
@@ -1188,7 +1196,7 @@ case 'pornhub':
             const resp = await axios.get('https://api.vhtear.com/funkuis&apikey=' + vhtearkey)
             if (resp.data.error) return aruga.reply(from, resp.data.error, id)
             const anm2 = `➸ Soal : ${resp.data.result.soal}\n\n➸ Poin : ${resp.data.result.poin}`
-            const jwban = `➸ Jawaban : ${resp.data.result.jawaban}\n\n➸ Deskripsi : ${resp.data.result.desk}`
+            const jwban = `➸ Jawaban : ${resp.data.result.jawaban}\n\n➸ Deskripsi : ${resp.data.result.desk}\n\nBy : Zeus`
             aruga.reply(from, anm2, id)
             aruga.sendText(from, `30 Detik Lagi...`, id)
             await sleep(20000)
@@ -2485,7 +2493,7 @@ case 'ytsearch':
 			})
 	          		break
 		case 'cekjodoh':
-			if (args.length !== 2) return aruga.reply(from, `Untuk mengecek jodoh melalui nama\nketik: ${prefix}cekjodoh nama-kamu nama-pasangan\n\ncontoh: ${prefix}cekjodoh bagas siti\n\nhanya bisa pakai nama panggilan (satu kata)`, id)
+			if (args.length !== 2) return aruga.reply(from, `Untuk mengecek jodoh melalui nama\nketik: ${prefix}cekjodoh2 nama-kamu nama-pasangan\n\ncontoh: ${prefix}cekjodoh2 bagas siti\n\nhanya bisa pakai nama panggilan (satu kata)`, id)
 			rugaapi.cekjodoh(args[0],args[1])
 	 		.then(async(res) => {
 				await aruga.sendFileFromUrl(from, `${res.link}`, '', `${res.text}`, id)
@@ -2873,7 +2881,7 @@ case 'wait':
                     aruga.reply(from, 'Ada yang Error!', id)
                 })
             } else {
-				aruga.reply(from, `Maaf format salah\n\nSilahkan kirim foto dengan caption ${prefix}whatanime\n\nAtau reply foto dengan caption ${prefix}whatanime`, id)
+				aruga.reply(from, `Maaf format salah\n\nSilahkan kirim foto dengan caption ${prefix}wait\n\nAtau reply foto dengan caption ${prefix}wait`, id)
 			}
             break
         // Other Command
@@ -3156,6 +3164,7 @@ case 'tagall':
 			break
 		case 'mutegrup':
 case 'mutegroup':
+case 'mutegrub':
 			if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
             if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
             if (!isBotGroupAdmins) return aruga.reply(from, 'Gagal, silahkan tambahkan bot sebagai admin grup!', id)
@@ -3284,6 +3293,7 @@ _Desc di update oleh : @${chat.groupMetadata.descOwner.replace('@c.us','')} pada
                     break
                     case 'grupbot':
 case 'grubbot':
+case 'groupbot':
                         const ch = `https://chat.whatsapp.com/CtFJ2onIGU47020JQZGsyp\n\nSkuy join grup Bot`
                         await aruga.sendText(from, ch, id)
                         break
@@ -3987,6 +3997,7 @@ case 'cnn':
                     aruga.sendText(ownerNumber, 'Berita Error : ' + err)
             }
             break
+
  
 case 'goldpb':
 case 'goldbp':
