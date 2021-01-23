@@ -6,15 +6,15 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "ArugaZ",
+  "author": "Zeus",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArugaZ/whatsapp-bot.git"
+    "url": "git+https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot.git"
   },
   "bugs": {
-    "url": "https://github.com/ArugaZ/whatsapp-bot/issues"
+    "url": "https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot/issues"
   },
-  "homepage": "https://github.com/ArugaZ/whatsapp-bot",
+  "homepage": "https://github.com/ZeusFtrOfc/Zeus_whatsapp-bot",
   "license": "ISC",
   "dependencies": {
     "@open-wa/wa-automate": "^3.1.0",
