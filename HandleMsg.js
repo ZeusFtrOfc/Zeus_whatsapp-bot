@@ -1251,6 +1251,47 @@ case 'pornhub':
                 await aruga.reply(from, `Wrong Format!\n[❗] Kirim perintah *${prefix}pornhub [ |Teks1| Teks2 ]*,\n\n contoh : *${prefix}pornhub |Dimas| HUB*`, id)
             }
             break
+case 'bot3':
+		if (args.length == 0) return aruga.replu(from, `Kirim perintah ${prefix}bot [teks]\nContoh : ${prefix}bot halo`, id)
+		const arbu = body.slice(5)
+		axios.get(`http://videfikri.com/api/simsimi/?teks=${arbu}`).then(res => {
+		console.log(arbu)
+		const segey = `${res.data.jawaban}`
+		aruga.reply(from, segey, id)
+		console.log(segey)
+	})
+    break
+ case 'iplocation':
+                            if (args.length == 0) return aruga.reply(from, `Tidak ada ip Address, silahkan masuk ip address anda\nContoh : ${prefix}iplocation 180.242.215.107`, id)
+                            axios.get(`https://ipapi.co/${body.slice(12)}/json/`)
+                            .then(async(res) => {
+                                const addr = `• *Ip :* ${res.data.ip}\n• *Ip Version :* ${res.data.version}\n• *Negara :* ${res.data.country_name}\n• *Kode Negara :* ${res.data.country_code}\n• *Ibu Kota :* ${res.data.country_capital}\n• *Wilayah :* ${res.data.region}\n• *Kode Wilayah :* ${res.data.region_code}\n• *Postal :* ${res.data.postal}\n• *Latitude :* ${res.data.latitude}\n• *Longitude :* ${res.data.longitude}\n• *Timezone :* ${res.data.timezone}\n• *Utc Offset :* ${res.data.utc_offset}\n• *Kode Panggilan Negara :* ${res.data.country_calling_code}\n• *Mata Uang :* ${res.data.currency_name}\n• *Kode Mata Uang :* ${res.data.currency}\n• *Bahasa :* ${res.data.languages}\n• *Jumlah Wilayah :* ${res.data.country_area}\n• *Populasi Negara :* ${res.data.country_population}\n• *ASN :* ${res.data.asn}\n• *Provider :* ${res.data.org}`
+                                aruga.reply(from, addr, id)
+                            })
+                            break
+                        case 'matauang':
+                            const matung = `List Currency : btc, usd, eur, gbp, aud, cad, chf, cny, jpy, sgd, nzd, pkr, hkd, krw, mxn, nok, egp, clp, ngn, brl, rub, uah, thb, pln, inr, eth, xmr, dash, doge, ltc, str, xrp`
+                            aruga.reply(from, matung, id)
+                            break
+  case 'convertduit':
+                        if (args.length == 0) return aruga.reply(from, `Untuk mengkonversi uang dari negara luar menjadi IDR\nContoh : ${prefix}convertduit usd|2000\n\nDan untuk mengecek mata uang bisa gunakan ${prefix}matauang`, id)
+                        const duit1 = arg.split('|')[0]
+                        const duit2 = arg.split('|')[1]
+                        await axios.get('https://api.terhambar.com/currency?curr='+duit1+'&bal='+duit2).then(res => {
+                            const duitnya = `Konversi mata uang ${res.data.result.currency} dari ${duit2}\n\nBalance Currency : *${res.data.result.balanceCurrency}*\n\nHasil Dirupiahkan : *${res.data.result.resultConvert}*`
+                            aruga.reply(from, duitnya, id)
+                        })
+                        break
+    case 'bot2':
+        if (args.length == 0) return aruga.reply(from, `Kirim perintah ${prefix}simi2 halo anjing`, id)
+        const anjg = body.slice(7)
+        axios.get(`https://tobz-api.herokuapp.com/api/simsimi?text=${anjg}&apikey=BotWeA`).then(res => {
+            console.log(anjg)
+            const babuy = `${res.data.result}`
+            aruga.reply(from, babuy, id)
+            console.log(babuy)
+        })
+        break
 
         case 'slightningt':
             aruga.reply(from, `[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!`, id)
@@ -1878,7 +1919,7 @@ case 'hartatahta':
                  if (webplay2.status == false) {
                     aruga.reply(from, `*Maaf Terdapat kesalahan saat mengambil data, mohon pilih media lain...*`, id)
                 } else {
-                   if (Number(webplay2.result.size.split(' MB')[0]) >= 5.00) return aruga.reply(from, 'Maaf durasi music sudah melebihi batas maksimal 5 MB!', id)
+                   if (Number(webplay2.result.size.split(' MB')[0]) >= 3.00) return aruga.reply(from, 'Maaf durasi music sudah melebihi batas maksimal 3 MB!', id)
                      const { image, mp3, size, ext, title, duration } = await webplay2.result
                     const captplay = `*「 MSC 」*\n\n• *Judul* : ${title}\n• *Durasi* : ${duration}\n• *Filesize* : ${size}\n• *Exp* : ${ext}\n\n_*Music Sedang Dikirim....*_`
                     aruga.sendFileFromUrl(from, image, `thumb.jpg`, captplay, id)
@@ -3040,13 +3081,22 @@ case 'alkitab':
             }
             break
    		case 'movie':
-			if (args.length == 0) return aruga.reply(from, `Untuk mencari suatu movie dari website sdmovie.fun\nketik: ${prefix}movie judulnya`, id)
-			rugaapi.movie((body.slice(7)))
-			.then(async (res) => {
-				if (res.status == 'error') return aruga.reply(from, res.hasil, id)
-				await aruga.sendFileFromUrl(from, res.link, 'movie.jpg', res.hasil, id)
-			})
-			break
+				if (args.length == 0) return aruga.reply(from, `Untuk mencari suatu film dari website Bajakan:v\n${prefix}movie the uncanny counter`, id)
+				await aruga.reply(from, mess.wait, id)
+				rugaapi.movie(args)
+				.then(async ({ result }) => {
+					let mov = '*-----「 MOVIE 」-----*'
+					for (let i = 0; i < result.length; i++) {
+						mov += `\n\n• *Judul :* ${result[i].title}\n• *URL Download :* ${result[i].url}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=`
+					}
+					await aruga.sendFileFromUrl(from, result[0].thumb, 'thumb.jpg', mov, id)
+					console.log('Success sending Movie from query')
+				})
+				.catch(async (err) => {
+					console.error(err)
+					await aruga.reply(from, 'Error!', id)
+				})
+				break
         case 'whatanime':
 case 'wait':
                   if (isMedia && type === 'image' || quotedMsg && quotedMsg.type === 'image') {
