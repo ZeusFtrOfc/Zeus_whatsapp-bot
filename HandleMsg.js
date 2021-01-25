@@ -185,7 +185,7 @@ module.exports = HandleMsg = async (aruga, message) => {
           aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'Makasih'){
-          aruga.reply(from, 'Iya sama-sama.', id)
+          aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'tq'){
           aruga.reply(from, 'Iya sama-sama..', id)
@@ -194,19 +194,19 @@ module.exports = HandleMsg = async (aruga, message) => {
           aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'Tengkyu'){
-          aruga.reply(from, 'Iya sama-sama.', id)
+          aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'Tq'){
           aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'Terima kasih'){
-          aruga.reply(from, 'Iya sama-sama.', id)
+          aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'terima kasih'){
           aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'Thx'){
-          aruga.reply(from, 'Iya sama-sama.', id)
+          aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'thx'){
           aruga.reply(from, 'Iya sama-sama..', id)
@@ -230,6 +230,12 @@ module.exports = HandleMsg = async (aruga, message) => {
           aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'Mks'){
+          aruga.reply(from, 'Iya sama-sama..', id)
+      }
+      if (chats == 'mksi'){
+          aruga.reply(from, 'Iya sama-sama..', id)
+      }
+      if (chats == 'Mksi'){
           aruga.reply(from, 'Iya sama-sama..', id)
       }
       if (chats == 'thanks'){
@@ -272,6 +278,12 @@ module.exports = HandleMsg = async (aruga, message) => {
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
       if (chats == 'Zeus'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'tod'){
+          aruga.sendPtt(from, './media/astg.mp3', id)
+      }
+      if (chats == 'Tod'){
           aruga.sendPtt(from, './media/astg.mp3', id)
       }
       if (chats == 'Ngentot'){
@@ -340,6 +352,12 @@ module.exports = HandleMsg = async (aruga, message) => {
       if (chats == 'Hi'){
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
+      if (chats == 'Hay'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'hay'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
       if (chats == 'hi'){
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
@@ -368,6 +386,12 @@ module.exports = HandleMsg = async (aruga, message) => {
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
       if (chats == 'Hallo bot'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'misi'){
+          aruga.sendPtt(from, './media/ohayou.mp3', id)
+      }
+      if (chats == 'Misi'){
           aruga.sendPtt(from, './media/ohayou.mp3', id)
       }
       if (chats == 'Hii'){
@@ -973,21 +997,26 @@ case 'antivirtek':
                         aruga.reply(from, `Wrong Format!\n⚠️ Harap Kirim Gambar Dengan ${prefix}setpic`, id)
                     }
                     break
-		  break 
 case 'jam':
-case 'time':
 if (args.length == 0) return aruga.reply(from, `Contoh : #jam surabaya`, id)
- rugaapi.jam(body.slice(10))
+					rugaapi.jam(body.slice(10))
         .then(async(res) => {
-            const jam = `*Date :* ${res.data.result.date}\n*Sun :* ${res.data.result.sun}\n*Time :* ${res.data.result.time}\n*Jam :* ${res.data.result.time}\n*Title :* ${res.data.result.title}`
-aruga.reply(from, jam, id)
+            const jam = ` *Date :* ${result[i].date}\n• *Sun :* ${result[i].sun}\n• *Time :* ${result[i].time}\n• *Title :* ${result[i].title}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nBy : Zeus`
+						
+            aruga.reply(from, jam, id)
         })
         .catch(() => {
             aruga.reply(from, 'Errorr...', id)
         })
-        break  
-  break
-
+        break
+case 'infofilm':
+		if (args.length == 0) return aruga.reply(from, 'Nomornya mana??', id)
+        const nomrohgg = body.slice(10)
+      const nomrohggnya = await fetch(`https://tobz-api.herokuapp.com/api/film?q=${nomrohgg}&apikey=BotWeA}`)
+      const nmrohgg = await nomrohggnya.json()
+      aruga.sendFileFromUrl(from, film.result.thumb, 'thumb.jpg', `*INFO FILM* \n➸ *Judul* : ${film.result.judul} \n➸ *Genre* : ${film.result.genre_negara} \n➸ *Rating* : ${film.result.rating} \n➸ *Link* : ${film.result.link}`, id)
+	     break 
+			
 case 'play':
  if (args.length == 0) return aruga.reply(from, `Gagal silahkan gunakan menu #ytmp3..!`, id)
                break   
@@ -1959,6 +1988,7 @@ case 'mascotlogo':
                         await aruga.reply(from, `Error!`, id)
                     })
             break
+
 case 'text3d':
 
             if (args.length == 0) return aruga.reply(from, `Membuat Gambar Text 3D\nPemakaian: ${prefix}text3d [teks]\n\ncontoh: ${prefix}text3d Zeus`, id)
@@ -2052,18 +2082,7 @@ case 'glowtext':
                         await aruga.reply(from, `Error!`, id)
                     })
             break
- case 'galaxytext':
-    if (args.length == 0) return aruga.reply(from, `Membuat Text jadi Gambar galaxy\nPemakaian: ${prefix}galaxytext [teks]\n\ncontoh: ${prefix}galaxytext Zeus`, id)
-                    await aruga.reply(from, `Wait....`, id)
-                console.log('Creating galaxytext text...')
-                const galaxytext = body.slice(12)
-                await aruga.sendFileFromUrl(from, `https://api.vhtear.com/galaxytext?text=${galaxytext}&apikey=${vhtearkey}`, '', 'Nih...', id)
-                    .then(() => console.log('Success creting image!'))
-                    .catch(async (err) => {
-                        console.error(err)
-                        await aruga.reply(from, `Error!`, id)
-                    })
-            break
+
     case 'partytext':
     if (args.length == 0) return aruga.reply(from, `Membuat Text jadi Gambar ala ala party\nPemakaian: ${prefix}partytext [teks]\n\ncontoh: ${prefix}partytext Zeus`, id)
                     await aruga.reply(from, `Wait....`, id)
@@ -2640,11 +2659,7 @@ case 'blackpink':
                         console.error(err)
                         await aruga.reply(from, `Error!`, id)
                     })
-            break 
-                     
-
-
-		       
+break
 case 'ytsearch':
     if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}ytsearch [ Query ]*, Contoh : ${prefix}ytsearch alan walker alone`, id)
     const ytsher = body.slice(10)
@@ -4104,8 +4119,13 @@ case 'textsummer':
 case 'textwhite':
 	case 'tekswhite':
 	   if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
-		const whitenya = `https://arugaz.my.id/api/textpro/sandwrite?text==${body.slice(10)}`
+		const whitenya = `https://arugaz.my.id/api/textpro/sandwrite?text=${body.slice(10)}`
 		aruga.sendFileFromUrl(from, whitenya, 'white.jpg', 'Nih...', id)
+		break
+case 'galaxytext':
+	   if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+		const galaxynya = `https://api.vhtear.com/galaxytext?text=${body.slice(10)}&apikey=${vhtearkey}`
+		aruga.sendFileFromUrl(from, galaxynya, 'galaxy.jpg', 'Nih...', id)
 		break
 
 case 'textmetal':
