@@ -200,6 +200,13 @@ And sussces!!
 | Kapan|✅|
 | Apakah|✅|
 | Bisakah|✅|
+| Nulis3|✅|
+| Nulis4|✅|
+| Nulis5|✅|
+| Covid19 dunia|✅|
+| Nulis6|✅|
+| joox|✅|
+| brainly work|✅|
 | Ai Quote|✅|
 | Doggo|✅|
 | Get Owner Group|✅|
