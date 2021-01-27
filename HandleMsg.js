@@ -4248,7 +4248,7 @@ case 'textcros':
 		aruga.reply(from, mess.wait, id)
 		 const textcros = body.slice(10)
 		 const cros = await fetch(`http://api.itsmeikyxsec404.xyz/crossfire?apikey=itsmeiky633&text=${textcros}`)
-		 const crosnya = await csgo.json()
+		 const crosnya = await cros.json()
 		 aruga.sendFileFromUrl(from, crosnya.result, 'cros.jpg', 'Nih...', id)
 		 break
 case 'textkayu':
