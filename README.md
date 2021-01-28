@@ -33,7 +33,7 @@
   
   
  
-<p align="center"><a href="https://wa.me/6288806173745?text=%23menu" target="_blank">Zeus Whatsapp BOT</a>.</p>
+<p align="center"><a href="https://wa.me/622299427739?text=%23menu" target="_blank">Zeus Whatsapp BOT New!</a>.</p>
 </div>
 
 
