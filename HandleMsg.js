@@ -60,6 +60,7 @@ const {
 	download
 } = require('./utils')
 
+
 const { 
     uploadImages,
     custom,
@@ -943,6 +944,70 @@ case 'javcosplay':
 						aruga.reply(from, 'Error....', id)
 					})
 					break
+case 'japanxxx':
+					await aruga.reply(from, mess.wait, id)
+					rugaapi.japan()
+					.then(async ({ result,data }) => {
+						let pan = '-----[ *BOK*P JAPAN* ]-----'
+						for (let i = 0; i < result.data.length; i++) {
+							pan += `\n\n• *title :* ${result.data[i].title}\n• *url :* ${result.data[i].url}\n• *image :* ${result.data[i].image}\n• *duration :* ${result.data[i].duration}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nBy : Zeus`
+						}
+						await aruga.reply(from, pan, id)
+						console.log('Succes Sending Japan')
+					})
+					.catch(async (err) => {
+						console.error(err)
+						aruga.reply(from, 'Error....', id)
+					})
+					break
+case 'koreaxxx':
+					await aruga.reply(from, mess.wait, id)
+					rugaapi.korea()
+					.then(async ({ result,data }) => {
+						let pane = '-----[ *BOK*P KOREA* ]-----'
+						for (let i = 0; i < result.data.length; i++) {
+							pane += `\n\n• *title :* ${result.data[i].title}\n• *url :* ${result.data[i].url}\n• *image :* ${result.data[i].image}\n• *duration :* ${result.data[i].duration}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nBy : Zeus`
+						}
+						await aruga.reply(from, pane, id)
+						console.log('Succes Sending Korea')
+					})
+					.catch(async (err) => {
+						console.error(err)
+						aruga.reply(from, 'Error....', id)
+					})
+					break
+case 'indoxxx':
+					await aruga.reply(from, mess.wait, id)
+					rugaapi.indo()
+					.then(async ({ result,data }) => {
+						let panek = '-----[ *BOK*P INDO* ]-----'
+						for (let i = 0; i < result.data.length; i++) {
+							panek += `\n\n• *title :* ${result.data[i].title}\n• *url :* ${result.data[i].url}\n• *image :* ${result.data[i].image}\n• *duration :* ${result.data[i].duration}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nBy : Zeus`
+						}
+						await aruga.reply(from, panek, id)
+						console.log('Succes Sending Indo')
+					})
+					.catch(async (err) => {
+						console.error(err)
+						aruga.reply(from, 'Error....', id)
+					})
+					break
+case 'listhentai':
+					await aruga.reply(from, mess.wait, id)
+					rugaapi.hentai()
+					.then(async ({ result }) => {
+						let tai = '-----[ *LIST HENTAI* ]-----'
+						for (let i = 0; i < result.length; i++) {
+							tai += `\n\n• *Title :* ${result[i].title}\n• *url :* ${result[i].url}\n• *detail :* ${result[i].detail}\n• *image :* ${result[i].image}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nBy : Zeus`
+						}
+						await aruga.reply(from, tai, id)
+						console.log('Succes Sending list hentai')
+					})
+					.catch(async (err) => {
+						console.error(err)
+						aruga.reply(from, 'Error....', id)
+					})
+					break
 case 'infotogel':
 case 'togel':
 					await aruga.reply(from, mess.wait, id)
@@ -1101,13 +1166,13 @@ case 'antivirtek':
                     }
                     break
 case 'infofilm':
-		if (args.length == 0) return aruga.reply(from, 'Nomornya mana??', id)
+		if (args.length == 0) return aruga.reply(from, 'Namanya mana??', id)
         const nomrohgg = body.slice(10)
       const nomrohggnya = await fetch(`https://tobz-api.herokuapp.com/api/film?q=${nomrohgg}&apikey=BotWeA}`)
       const nmrohgg = await nomrohggnya.json()
       aruga.sendFileFromUrl(from, film.result.thumb, 'thumb.jpg', `*INFO FILM* \n➸ *Judul* : ${film.result.judul} \n➸ *Genre* : ${film.result.genre_negara} \n➸ *Rating* : ${film.result.rating} \n➸ *Link* : ${film.result.link}`, id)
 	     break 
-			
+		
  case 'filmapikdownload':
             if (args.length == 0) return aruga.reply(from, `Untuk mencari detail film dan link download film gunakan ${prefix}filmapikdownload link filmapik\nContoh : ${prefix}filmapikdownload http://103.194.171.18/peninsula/play`, id)
             axios.get(`https://arugaz.my.id/api/media/filmapik/detail?url=${body.slice(18)}`)
@@ -1192,6 +1257,7 @@ case 'cekjodoh':
         })
         break
 case 'artinama2':
+case 'artinama':
         if (args.length == 0) return aruga.reply(from, `Untuk mengecek artinama anda\nUsage : ${prefix}artinama2 Zeus`, id)
         rugaapi.name(args[0],args[1])
         .then(async(res) => {
@@ -1396,12 +1462,22 @@ case 'bot3':
                         break
     case 'bot2':
        if (args.length == 0) return aruga.reply(from, 'Menu buat bicara gajelas gan,\nContoh: #bot2 halo', id)
-        const anjg = body.slice(7)
+        const anjg = body.slice(6)
         axios.get(`https://tobz-api.herokuapp.com/api/simsimi?text=${anjg}&apikey=BotWeA`).then(res => {
             console.log(anjg)
             const babuy = `${res.data.result}`
             aruga.reply(from, babuy, id)
             console.log(babuy)
+        })
+        break
+case 'bot':
+       if (args.length == 0) return aruga.reply(from, 'Menu buat bicara gajelas gan,\nContoh: #bot halo', id)
+        const anjgq = body.slice(5)
+        axios.get(`https://videfikri.com/api/simsimi/?teks=${anjgq}`).then(res => {
+            console.log(anjgq)
+            const babuyq = `${res.data.jawaban}`
+            aruga.reply(from, babuyq, id)
+            console.log(babuyq)
         })
         break
 
@@ -2772,14 +2848,14 @@ case 'ss':
             break
                    case 'fb':
 		case 'facebook':
-			if (args.length == 0) return aruga.reply(from, `Untuk mendownload video dari link facebook\nketik: ${prefix}fb [link_fb]`, id)
-			rugaapi.facebook(args[0])
+			if (args.length === 0) return aruga.reply(from, `Kirim perintah *#fb [ Link Fb ]*\nContoh : *#fb https://www.facebook.com/24609282673/posts/10158628585367674/*`, id)
+           rugaapi.facebook(args[0])
 			.then(async (res) => {
-				const { link, VideoUrl } = res
+				const { link, linkhd, linksd } = res
 				if (res.status == 'error') return aruga.sendFileFromUrl(from, link, '', 'Maaf url anda tidak dapat ditemukan', id)
-				await aruga.sendFileFromUrl(from, VideoUrl, '', 'Nih ngab videonya', id)
+				await aruga.sendFileFromUrl(from, linkhd, '', 'Nih ngab videonya', id)
 				.catch(async () => {
-					await aruga.sendFileFromUrl(from, VideoUrl, '', 'Nih ngab videonya', id)
+					await aruga.sendFileFromUrl(from, linksd, '', 'Nih ngab videonya', id)
 					.catch(() => {
 						aruga.reply(from, 'Maaf url anda tidak dapat ditemukan', id)
 					})
@@ -2791,15 +2867,15 @@ case 'slot':
                 const somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]   
                 const somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]  
                 if (somtoyy  == '🍌 : 🍌 : 🍌') {
-              aruga.sendText(from, `[ 🎰 SLOTS 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n*DIH LU KO HOKI BANGET SIH ASW!!*`, id)
+              aruga.sendText(from, `[ 🎰 SLOTS 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n_*SELAMAT ANDA BERHAK MENDAPATKAN REWARD!*_\n\n\n\n\n*TAPI BOONG:V*`, id)
                 } else if (somtoyy == '🍒 : 🍒 : 🍒') {
-                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n*DIH LU KO HOKI BANGET SIH ASW!!*`, id)
+                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n_*SELAMAT ANDA BERHAK MENDAPATKAN REWARD!*_\n\n\n\n\n*TAPI BOONG:V*`, id)
                 } else if (somtoyy == '🔔 : 🔔 : 🔔') {
-                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n*DIH LU KO HOKI BANGET SIH ASW!!*`, id)
+                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n_*SELAMAT ANDA BERHAK MENDAPATKAN REWARD!*_\n\n\n\n\n*TAPI BOONG:V*`, id)
                 } else if (somtoyy == '🍐 : 🍐 : 🍐') {
-                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n*DIH LU KO HOKI BANGET SIH ASW!!*`, id)
+                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n_*SELAMAT ANDA BERHAK MENDAPATKAN REWARD!*_\n\n\n\n\n*TAPI BOONG:V!*`, id)
                 } else if (somtoyy == '🍇 : 🍇 : 🍇') {
-                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n*DIH LU KO HOKI BANGET SIH ASW!!*`, id)
+                aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n_*SELAMAT ANDA BERHAK MENDAPATKAN REWARD!*_\n\n\n\n\n*TAPI BOONG:V*`, id)
                 } else {
                 aruga.sendText(from, `[ 🎰 |SLOTS| 🎰 ]\n-----------------\n${somtoy}\n${somtoyy} ◀️\n${somtoyyy}\n-----------------\n[ 🎰 |SLOTS| 🎰 ]\n\n`, id)
                 }
@@ -2972,13 +3048,7 @@ case 'ytsearch':
                 aruga.reply(from, 'Ada yang Error!', id)
             })
             break
-		case 'artinama':
-			if (args.length == 0) return aruga.reply(from, `Untuk mengetahui arti nama seseorang\nketik ${prefix}artinama namakamu`, id)
-            rugaapi.artinama(body.slice(10))
-			.then(async(res) => {
-				await aruga.reply(from, `Arti : ${res.result.arti}\nDesc : ${res.result.desc}\n\nBy : Zeus`, id)
-			})
-	          		break
+		
 					
         // Random Kata
       	      case 'urgay':
@@ -3568,6 +3638,7 @@ case 'wait':
             case 'del':
 case 'delete':
  if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
+if (!isGroupAdmins & !isOwnerB) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
                         if (!quotedMsg) return aruga.reply(from, `Maaf, format pesan salah silahkan.\nReply pesan bot dengan caption ${prefix}del`, id)
                 if (!quotedMsgObj.fromMe) return aruga.reply(from, `Maaf, format pesan salah silahkan.\nReply pesan bot dengan caption ${prefix}del`, id)
                 aruga.deleteMessage(quotedMsgObj.chatId, quotedMsgObj.id, false)
@@ -3645,14 +3716,7 @@ case 'harta':
                     await aruga.reply(from, 'Error!', id)
                 }
             break
-        case 'bot':
-if (args.length == 0) return aruga.reply(from, 'Menu buat bicara gajelas gan,\nContoh: #bot halo', id)
-           const que = body.slice(6)
-            const sigo = await axios.get(`https://st4rz.herokuapp.com/api/simsimi?kata=${que}\n\nBy : Zeus`)
-            const sigot = sigo.data
-            aruga.reply(from, sigot.result, id)
-            console.log(sigot)
-            break
+        
         case 'edotensei':
             if (!isGroupMsg) return aruga.reply(from, 'Fitur ini hanya bisa di gunakan dalam group', id)
     if (!isGroupAdmins & !isOwnerB) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
@@ -3898,7 +3962,8 @@ case 'math':
                             }
                             break
                         case 'delbacot':
-                                    const delbd = dbcot.indexOf(body.slice(12))
+       if (!isOwnerB) return await aruga.reply(from, 'Fitur ini hanya dapat digunakan oleh admin bot')
+          const delbd = dbcot.indexOf(body.slice(12))
                                     dbcot.splice(delbd, 1)
                                     fs.writeFileSync('./lib/database/bacot.json', JSON.stringify(dbcot))
                                     aruga.reply(from, `Success Menghapus Bacot!`, id)
@@ -3928,6 +3993,7 @@ case 'math':
                     }
                     break
                     case 'delsay':
+if (!isOwnerB) return await aruga.reply(from, 'Fitur ini hanya dapat digunakan oleh admin bot')
                             const delsay = dsay.indexOf(body.slice(12))
                             dsay.splice(delsay, 1)
                             fs.writeFileSync('./lib/database/say.json', JSON.stringify(dsay))
@@ -4074,7 +4140,7 @@ case 'silk':
  case 'pinterest':
  case 'images2':
               if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#pinterest [query]*\nContoh : *#pinterest Zeus*', id)
-            const ptrsq = body.slice(11)
+            const ptrsq = body.slice(9)
             const ptrst = await fetch(`https://api.vhtear.com/pinterest?query=${ptrsq}&apikey=${vhtearkey}`)
             if (!ptrst.ok) throw new Error(`Error Pinterest : ${ptrst.statusText}`)
             const ptrs = await ptrst.json()
@@ -4353,7 +4419,7 @@ case 'randomstiker':
 		 aruga.sendFileFromUrl(from, jokernya.result, 'joker.jpg', 'Nih...', id)
 		 break
 case 'textkopi':
-	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??\n\nJangan pake spasi ya kak..', id)
 		aruga.reply(from, mess.wait, id)
 		 const textkopi = body.slice(10)
 		 const kopi = await fetch(`http://api.itsmeikyxsec404.xyz/coffe?apikey=itsmeiky633&text=${textkopi}`)
@@ -4361,7 +4427,7 @@ case 'textkopi':
 		 aruga.sendFileFromUrl(from, kopinya.result, 'kopi.jpg', 'Nih...', id)
 
 case 'textcsgo':
-	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??\n\nJangan pake spasi ya kak..', id)
 		aruga.reply(from, mess.wait, id)
 		 const textcsgo = body.slice(10)
 		 const csgo = await fetch(`http://api.itsmeikyxsec404.xyz/csgo?apikey=itsmeiky633&text=${textcsgo}`)
@@ -4369,7 +4435,7 @@ case 'textcsgo':
 		 aruga.sendFileFromUrl(from, csgonya.result, 'csgo.jpg', 'Nih...', id)
 		 break
 case 'textcros':
-	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??\n\nJangan pake spasi ya kak..', id)
 		aruga.reply(from, mess.wait, id)
 		 const textcros = body.slice(10)
 		 const cros = await fetch(`http://api.itsmeikyxsec404.xyz/crossfire?apikey=itsmeiky633&text=${textcros}`)
@@ -4377,7 +4443,7 @@ case 'textcros':
 		 aruga.sendFileFromUrl(from, crosnya.result, 'cros.jpg', 'Nih...', id)
 		 break
 case 'textkayu':
-	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??\n\nJangan pake spasi ya kak..', id)
 		aruga.reply(from, mess.wait, id)
 		 const textkayu = body.slice(10)
 		 const kayu = await fetch(`http://api.itsmeikyxsec404.xyz/woodblock?apikey=itsmeiky633&text=${textkayu}`)
@@ -4385,9 +4451,9 @@ case 'textkayu':
 		 aruga.sendFileFromUrl(from, kayunya.result, 'kayu.jpg', 'Nih...', id)
 		 break
 case 'textwarface':
-	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??', id)
+	     if (args.length === 0) return aruga.reply(from, 'Teks nya mana??\n\nJangan pake spasi ya kak..', id)
 		aruga.reply(from, mess.wait, id)
-		 const textface = body.slice(10)
+		 const textface = body.slice(13)
 		 const face = await fetch(`http://api.itsmeikyxsec404.xyz/warface?apikey=itsmeiky633&text=${textface}`)
 		 const facenya = await face.json()
 		 aruga.sendFileFromUrl(from, facenya.result, 'face.jpg', 'Nih...', id)
