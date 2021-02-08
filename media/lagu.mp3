@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>YouTube to MP3 Converter - Convert YouTube to MP3 in high quality</title>
+<meta name="description" content="Convert and Download MP3 from YouTube in high quality. Convert all YouTube videos to MP3 in just a few seconds. Easy to Convert and Download, fast, simply and FREE!" />
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="YouTube to MP3 Converter - Convert YouTube to MP3 in high quality" />
+<meta property="og:description" content="Convert and Download MP3 from YouTube in high quality. Convert all YouTube videos to MP3 in just a few seconds. Easy to Convert and Download, fast, simply and FREE!" />
+<meta property="og:image" content="https://www.y2mate.com/images/256x256.png" />
+<link rel="canonical" href="https://www.y2mate.com/en30/youtube-mp3" /> <link rel="alternate" href="https://www.y2mate.com/en30/youtube-mp3" hreflang="x-default" /><link rel="alternate" href="https://www.y2mate.com/en30/youtube-mp3" hreflang="en" /><link rel="alternate" href="https://www.y2mate.com/de13/youtube-mp3" hreflang="de" /><link rel="alternate" href="https://www.y2mate.com/es16/youtube-mp3" hreflang="es" /><link rel="alternate" href="https://www.y2mate.com/fr18/youtube-mp3" hreflang="fr" /><link rel="alternate" href="https://www.y2mate.com/hi12/youtube-mp3" hreflang="hi" /><link rel="alternate" href="https://www.y2mate.com/id12/youtube-mp3" hreflang="id" /><link rel="alternate" href="https://www.y2mate.com/it16/youtube-mp3" hreflang="it" /><link rel="alternate" href="https://www.y2mate.com/jp12/youtube-mp3" hreflang="ja" /><link rel="alternate" href="https://www.y2mate.com/kr12/youtube-mp3" hreflang="ko" /><link rel="alternate" href="https://www.y2mate.com/my12/youtube-mp3" hreflang="ms" /><link rel="alternate" href="https://www.y2mate.com/ph12/youtube-mp3" hreflang="en-PH" /><link rel="alternate" href="https://www.y2mate.com/pt12/youtube-mp3" hreflang="pt" /><link rel="alternate" href="https://www.y2mate.com/ru12/youtube-mp3" hreflang="ru" /><link rel="alternate" href="https://www.y2mate.com/th12/youtube-mp3" hreflang="th" /><link rel="alternate" href="https://www.y2mate.com/tr12/youtube-mp3" hreflang="tr" /><link rel="alternate" href="https://www.y2mate.com/sa12/youtube-mp3" hreflang="sa" /><link rel="alternate" href="https://www.y2mate.com/vi12/youtube-mp3" hreflang="vi" /><link rel="alternate" href="https://www.y2mate.com/zh-cn9/youtube-mp3" hreflang="zh-CN" /><link rel="alternate" href="https://www.y2mate.com/zh-tw9/youtube-mp3" hreflang="zh-TW" /><link rel="alternate" href="https://www.y2mate.com/bn12/youtube-mp3" hreflang="bn" />
+<link rel="dns-prefetch" href="//youtubepp.com">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//ssl.google-analytics.com">
+<meta name="google-site-verification" content="PBAZjp9e-aOq3EJVlhg_MAsYxyhBeNITt2KDHCz0A9s" />
+<link rel="icon" href="//www.y2mate.com/themes/images/logo.png" />
+<link rel="stylesheet" type="text/css" href="//www.y2mate.com/themes/bootstrap/css/bootstrap.min.css?v=1.2" />
+<link rel="stylesheet" type="text/css" href="//www.y2mate.com/themes/css/style.css?v=2.2" />
+<style type="text/css">@media (min-width: 768px){h1{font-size:29px}}@media (max-width: 768px){h2{font-size:21px}.hero > .hero-header:first-child{font-size:29px;margin-top:0;line-height:1.5!important;padding-top:20px}}.i-auto>div,#___ytsubscribe_0{height:auto!important}.i-auto>div>iframe,#___ytsubscribe_0>iframe{height:auto!important}.hero-homepage.hero{overflow:visible}.panel_file_type li{padding-top:5px}.panel_file_type .p-t-md{padding-top:10px!important}</style>
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" async="async"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" async="async"></script>
+    <![endif]-->
+<script type="text/javascript" charset="utf-8">
+        var base_url = 'https://www.y2mate.com/';
+        var lang = 'en';
+        var video_id, video_service,video_extractor ;
+    </script>
+</head>
+<body id="bootstrap-themes" class="swag-line">
+<div class="container-overflow-wrap">
+<nav class="navbar navbar-tall navbar-full" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<div class="navbar-brand logo-cont">
+<a class="" href="/en69" style="padding: 0;">
+<img src="//www.y2mate.com/themes/images/logo.png" alt="Logo y2mate.com" style="height:46px;" />
+<span id="logo-name">
+y2mate.com
+</span>
+</a>
+</div>
+<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#global-nav">
+<span class="sr-only">Y2Mate.com</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse" id="global-nav">
+ <div class="navbar-right">
+<ul class="nav navbar-nav">
+<li>
+<a href="/en5/download-youtube">YouTube Downloader</a>
+</li>
+<li>
+<a href="/en30/convert-youtube">YouTube Converter</a>
+</li>
+<li>
+<a class="active" href="/en30/youtube-mp3">YouTube to MP3 Converter</a>
+</li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
+<ul class="dropdown-menu" id="menu-lang">
+<li><a data-lang="en" href="/en/youtube-mp3/HHP5MKgK0o8">English</a></li>
+<li><a data-lang="de" href="/de/youtube-mp3/HHP5MKgK0o8">Deutsch</a></li>
+<li><a data-lang="es" href="/es/youtube-mp3/HHP5MKgK0o8">Español</a></li>
+<li><a data-lang="fr" href="/fr/youtube-mp3/HHP5MKgK0o8">Français</a></li>
+<li><a data-lang="hi" href="/hi/youtube-mp3/HHP5MKgK0o8">हिन्दी / Hindī</a></li>
+<li><a data-lang="id" href="/id/youtube-mp3/HHP5MKgK0o8">Indonesian</a></li>
+<li><a data-lang="it" href="/it/youtube-mp3/HHP5MKgK0o8">Italiano</a></li>
+<li><a data-lang="jp" href="/jp/youtube-mp3/HHP5MKgK0o8">日本語</a></li>
+<li><a data-lang="kr" href="/kr/youtube-mp3/HHP5MKgK0o8">한국어</a></li>
+<li><a data-lang="my" href="/my/youtube-mp3/HHP5MKgK0o8">Malay</a></li>
+<li><a data-lang="ph" href="/ph/youtube-mp3/HHP5MKgK0o8">Filipino</a></li>
+<li><a data-lang="pt" href="/pt/youtube-mp3/HHP5MKgK0o8">Português</a></li>
+<li><a data-lang="ru" href="/ru/youtube-mp3/HHP5MKgK0o8">Русский</a></li>
+<li><a data-lang="th" href="/th/youtube-mp3/HHP5MKgK0o8">ไทย</a></li>
+<li><a data-lang="tr" href="/tr/youtube-mp3/HHP5MKgK0o8">Türkçe</a></li>
+<li><a data-lang="sa" href="/sa/youtube-mp3/HHP5MKgK0o8">العربية</a></li>
+<li><a data-lang="vi" href="/vi/youtube-mp3/HHP5MKgK0o8">Tiếng Việt</a></li>
+<li><a data-lang="zh-cn" href="/zh-cn/youtube-mp3/HHP5MKgK0o8">简体中文</a></li>
+<li><a data-lang="zh-tw" href="/zh-tw/youtube-mp3/HHP5MKgK0o8">繁體中文</a></li>
+<li><a data-lang="bn" href="/bn/youtube-mp3/HHP5MKgK0o8">বাঙালি</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+<div style="clear: both;">
+<div>
+<div class="container">
+<div class="panel panel-default m-b-0">
+<div class="panel-body">
+<div class="div-form">
+<div class="hero hero-homepage">
+<h1 class="hero-header">YouTube to MP3 Converter</h1>
+<div class="ads_banner m-t m-b">
+</div>
+<div>
+<form class="form-inline form-search" action="/en30/youtube-mp3" id="search-form" name="mc-embedded-subscribe-form">
+<input class="form-control input-lg" value="https://www.youtube.com/watch?v=HHP5MKgK0o8" id="txt-url" name="query" type="text" placeholder="Search or paste link here...">
+<button type="button" value="Start" id="btn-submit" class="btn btn-lg" onclick="analyze();">
+<span class="hidden-xs">Start </span> <span class="glyphicon glyphicon-arrow-right"></span>
+</button>
+<div id=result-suggest-container></div>
+<p class="small">By using our service you are accepting our <a class="active" href="/terms-of-service" target="_blank">Terms of Use</a>. </p>
+<img id="loading_img" src="//www.y2mate.com/themes/images/loading.gif" style="display: none" />
+</form>
+</div>
+<div id="ads_spot1" style="max-width: 100%; margin-bottom: 15px; text-align: center"> </div>
+<div id="result" class="m-t-lg">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row row-padded row-bordered row-centered p-l-md p-r-md">
+<div class="col-sm-12">
+<div class="text-center">
+<h2><strong>The best YouTube to MP3 Converter & Downloader</strong></h2>
+<h4>
+Our Youtube MP3 converter allows you to convert YouTube videos to MP3 with just a few clicks. You can download MP3 music with many different quality such as: 128kbps, 320kbps, 64kbps, 96kbps, 192kbps, 256 kbps. Now you can easily convert thousands of videos from YouTube and save them to your collection of favorite songs. It has never been easier to convert YouTube to MP3. </h4>
+</div>
+</div>
+</div>
+<div class="homepage-grid text-center m-t p-l-md p-r-md featured">
+<div class="row">
+<div class="col-xs-12 col-sm-6 text-center row-padded ">
+<span class="glyphicon glyphicon-certificate" aria-hidden="true"> </span>
+<h3><strong>Full platforms supported</strong></h3>
+<p>We support all device platforms. Easy to convert YouTube videos to MP3 files regardless of whether you are using Windows, Mac or Linux, Android, iPhone.</p>
+</div>
+<div class="col-xs-12 col-sm-6 text-center row-padded ">
+<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> </span>
+<h3><strong>Easily converting</strong></h3>
+<p>No register accounts needed. All you need to do is to enter the video's url that you wish to convert & download. Select the format then click "download" to start the converting process.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-6 text-center row-padded ">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"> </span>
+<h3><strong>Full file format supported</strong></h3>
+<p>We support all video and audio formats conversion. You can easily convert YouTube videos to MP3, 3GP, MP4, WMA, M4A, FLV, WEBM and MO formats, etc.</p>
+</div>
+<div class="col-xs-12 col-sm-6 text-center row-padded ">
+<span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"> </span>
+<h3><strong>Upload to cloud</strong></h3>
+<p>We support uploading the converted files to your DropBox and Google Drive.</p>
+</div>
+</div>
+</div>
+<hr />
+<div class="row row-padded homepage-grid text-center m-t p-l-md p-r-md">
+<div class="col-md-12 m-b">
+<div class="text-left">
+<h2>How to convert YouTube videos to MP3?</h2>
+<p>1. Enter keywords or YouTube url into the search box.</p>
+<p>2. Choose MP3 with quality you want to convert and click the "Download" button. </p>
+<p>3. Wait until the conversion is completed and download the file. Very easy and fast.</p>
+</div>
+<p class="text-left"><b>Tip:</b> Insert "<b>pp</b>" after the word "youtube" in the link to download videos and mp3 files from YouTube as a faster way.</p>
+<p class="text-left"><img alt="tip how to quick download youtube video MP3" style="max-height: 50px; max-width: 100%" src="//www.y2mate.com/themes/images/tip-download-youtube.jpg" /> </p>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="progress" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal-dialog" role="document" style="z-index: 999999">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+</button>
+<b class="modal-title" id="exampleModalLabel"> </b>
+</div>
+<div class="modal-body text-center">
+<div id="process-waiting">
+<img id="loading_img" src="//www.y2mate.com/themes/images/loading.gif" class="m-t" />
+<p class="p-t"><b>Please wait while the file is being prepared for downloading</b></p>
+</div>
+<div id="process-result">
+</div>
+<div id="share-place-download">
+<p class="text-left">
+Thank you for using our service. If you could share our website with your friends, that would be a great help.
+<br>
+</p>
+<div class="text-center">
+<div class="addthis_inline_share_toolbox_u0o6"></div>
+</div>
+<p class="text-left">
+<br>
+<strong>Thank you.</strong>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    var k_page = 'mp3';
+    var g_token = '';
+    var k_get_query = "https:\/\/www.youtube.com\/watch?v=HHP5MKgK0o8";
+    var k_data_vid = '';
+    var k_data_vtitle = '';
+    var k__id = ''; var fquality = '128';
+    var k_busy = false;
+    var p_b = false;
+    var k_analyze_url = "https:\/\/www.y2mate.com\/mates\/mp3\/ajax";
+    var k_convert_url = "https:\/\/www.y2mate.com\/mates\/mp3Convert";
+    var k_tmp_url = "\/_hl_\/youtube-mp3\/";
+    var wLocation = "\/youtube-mp3\/";
+    function parse_query_string(query) {
+        var vars = query.split("&");
+        var query_string = {};
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = decodeURIComponent(pair[1]);
+            } else if (typeof query_string[pair[0]] === "string") {
+                var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+                query_string[pair[0]] = arr;
+            } else {
+                query_string[pair[0]].push(decodeURIComponent(pair[1]));
+            }
+        }
+        return query_string;
+    };
+    var k_qs = parse_query_string(window.location.search.substring(1));
+</script>
+<footer class="footer clearfix footer-borderless">
+<p>@2021 y2mate.com</p>
+<ul class="footer-list">
+<li class="footer-list-item">
+<a class="footer-list-link" href="/about-us">About</a>
+</li>
+<li class="footer-list-item">
+<a class="footer-list-link" href="/faq">FAQ</a>
+</li>
+<li class="footer-list-item">
+<a class="footer-list-link" href="/contact-us">Contact</a>
+</li>
+<li class="footer-list-item">
+<a class="footer-list-link" href="/terms-of-service">Terms of Service</a>
+</li>
+<li class="footer-list-item">
+<a class="footer-list-link" href="/privacy-policy">Privacy Policy</a>
+</li>
+</ul>
+</footer>
+</div>
+<script type="text/javascript" charset="utf-8" async src="//www.y2mate.com/themes/js/main.js?v=1.2"></script>
+<script type="text/javascript" charset="utf-8" async src="https://www.googletagmanager.com/gtag/js?id=UA-84863187-21"></script>
+<script type="text/javascript" charset="utf-8">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-84863187-21');
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5800a568d40f92ed" async></script>
+</body>
+</html>
