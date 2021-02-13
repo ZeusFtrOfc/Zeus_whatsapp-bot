@@ -3118,7 +3118,7 @@ case 'seticker':
                                 await aruga.reply(from, 'Format pesan salah...', id)
                             }} else if (args.length === 1) {
                 if (!isUrl(url)) { await aruga.reply(from, 'Maaf, link yang kamu kirim tidak valid.', id) }
-                piyo.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
+                aruga.sendStickerfromUrl(from, url).then((r) => (!r && r !== undefined)
                     ? aruga.sendText(from, 'Maaf, link yang kamu kirim tidak memuat gambar.')
                     : aruga.reply(from, 'Here\'s your sticker')).then(() => console.log(`Sticker Processed for ${processTime(t, moment())} Second`))
             } else {
