@@ -696,6 +696,23 @@ module.exports = HandleMsg = async (aruga, message) => {
             '1 Jam lagi',
             '1 Menit lagi'
             ]
+const pelet = [
+            '1 Minggu lagi',
+            '1 Bulan lagi',
+            '1 Tahun lagi',
+            '100 tahun lagi',
+            '1 menit lagi',
+            '2030',
+            '1 Jam lagi',
+            '1 Menit lagi',
+            '30 detik lagi',
+            '3 menit lagi',
+            '5 menit lagi', 
+             '30menit lagi',
+            '5jam lagi',
+            '2 jam lagi',
+            '10 menit lagi' 
+            ]
 
         const rate = [
             '100%',
@@ -3128,28 +3145,7 @@ case 'hartatahta':
                         await aruga.reply(from, `Error!`, id)
                     })
             break
- case 'msc':
-            if (args.length == 0) return aruga.reply(from, 'Kirim perintah #msc <query>\nContoh : #msc alone', id)
-		aruga.reply(from, mess.wait, id)
-	   const pncriany = body.slice(6)
-	   axios.get(`https://api.vhtear.com/ytmp3?query=${pncriany}&apikey=${vhtearkey}`)
-		.then(async(res) => {
-		await aruga.sendFileFromUrl(from, `${res.data.result.image}`, '', `「 *Youtube Download* 」\n\nJudul: ${res.data.result.title}\nDurasi: ${res.data.result.duration}\nSize: ${res.data.result.size}\nURL: ${res.data.result.url}\n\n*_Waitt, sedang di prosess oleh Bot!_*\nSelesai musik dikirimim jangan lupa berterimakasih!\n\n*Gamakasih + Block!!!*\n\nBy : ZeusXz`, id)
-if (Number(res.data.result.size.split(' MB')[0] > 4)) return aruga.reply(from, 'Maaf, Ukuran file terlalu besar!\nMax 4mb!', id)
-const saveit2 = await fetch(res.data.result.mp3)
-		const bufflah = await saveit2.buffer();
-		await sleep(1000)
-		fs.writeFile('./media/lagu.mp3', bufflah)
-		await aruga.sendFile(from, './media/lagu.mp3', '', '', id)
-		.then(async(res) => {
-		await aruga.sendFileFromUrl(from, res.result, '', '', id)
-		.catch(() => {
-		aruga.reply(from, 'Maaf, terjadi kesalahan', id)
-		})
-		})
-		})
-		break
- case 'lagu':
+  case 'lagu':
             if (args.length == 0) return aruga.reply(from, `Untuk mencari lagu dari youtube\n\nPenggunaan: #lagu judul lagu`, id)
            if (!isOwnerBot) return aruga.reply(from, 'Perintah ini hanya untuk Owner bot\n yee iri di sini padahal bisa download lagu lebih dari 30mb:v,klo mau gunain pake *#msc* aja.', id)                     
    try {
@@ -4387,19 +4383,35 @@ const cuacaq = body.slice(7)
 case 'ytmp3':
 if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                                   if (args.length == 0) return aruga.reply(from, `Untuk mendownload lagu dari youtube\nketik: ${prefix}ytmp3 [link_yt]`, id)
-                aruga.reply(from, mess.wait, id)
-		axios.get(`https://st4rz.herokuapp.com/api/yta2?url=${body.slice(7)}`)
-                .then(async(res) => {
-				await aruga.sendFileFromUrl(from, res.data.thumb, '', `「 *YOUTUBE MP3* 」\n\nJudul: ${res.data.title}\nExecute: ${res.data.ext}\n\n*_Waitt, lemme send that fuckin' audio_*`, id)
-				await aruga.sendFileFromUrl(from, res.data.result, '', '', id)
-                      		.catch((err) => {
-				aruga.reply(from, `URL ${linkmp3} Sudah pernah didownload sebelumnya, Link akan direset selama 30 menit`,id)
-			 })
+                 const pcr = body.slice(6)
+	  console.log(color(`Hasil Pencarian ${pcr}`, 'green'))
+           axios.get(`https://api.zeks.xyz/api/yts?q=${pcr}&apikey=apivinz`)
+            .then(async (res) => {
+                await aruga.sendFileFromUrl(from, `${res.data.result[0].video.thumbnail_src}`, ``, `「 *PLAY* 」\n\nJudul: ${res.data.result[0].video.title}\nDurasi: ${res.data.result[0].video.duration} detik\nUploaded: ${res.data.result[0].video.upload_date}\nView: ${res.data.result[0].video.views}\nUrl: ${res.data.result[0].video.url}\n\n*_Wait, ZeusXz Bot lagi ngirim Audionya_*`, id)
+				rugaapi.ytmp3(`https://youtu.be/${res.data.result[0].video.id}`)
+                                .then(async(res) => {
+				await aruga.sendFileFromUrl(from, res.result, '', '', id) 
+                                .catch((err) => {
+                                        aruga.reply(from, 'Error anjing', id)
+                                   })
+                                })
+                        })
+                        break
+case 'msc':
+               if (args.length == 0) return aruga.reply(from, `Untuk mencari video dari youtube\n\nPenggunaan: ${prefix}msc judul lagu`, id)
+	    const ase = body.slice(7)
+            axios.get(`https://api.zeks.xyz/api/yts?q=${ase}&apikey=apivinz`)
+            .then(async (res) => {
+                await aruga.sendFileFromUrl(from, `${res.data.result[0].video.thumbnail_src}`, ``, `「 *MSC* 」\n\nJudul: ${res.data.result[0].video.title}\nDurasi: ${res.data.result[0].video.duration} detik\nUploaded: ${res.data.result[0].video.upload_date}\nView: ${res.data.result[0].video.views}\nUrl: ${res.data.result[0].video.url}*\nSetelah vidio dikirim jangan lupa berterimakasih\n\n*Ga makasih = Block!!*\n\n\n\n*_Wait, ZeusXz Bot lagi ngirim Audionya_*`, id)
+				rugaapi.ymp4(`https://youtu.be/${res.data.result[0].video.id}`)
+				.then(async(res) => {
+					 await aruga.sendFileFromUrl(from, res.result, '', '', id)
+                                	.catch((err) => {
+                                	aruga.reply(from, `URL ${pncri} Sudah pernah didownload sebelumnya, Link akan direst`)
+                         })
 			})
-			.catch(err => {
-				aruga.reply(from, 'error', id)
-			})
-    			break
+                       })
+                        break
  case 'translate2':
 		     if (args.length == 0) return aruga.reply(from, `Untuk menggunakan translate pada sebuah kata gunakan ${prefix}translate2 [kode bahasa]\nContoh: ${prefix}translate2 id|my name is udin`, id)
 			const csuway1 = arg.split('|')[0]
@@ -5137,6 +5149,15 @@ if (!isOwnerB) return await aruga.reply(from, 'Fitur ini hanya dapat digunakan o
                         const alasan = arg.split('|')[1]
                         await aruga.sendTextWithMentions(from, `Santet terkirim ke ${target}, Dengan alasan${alasan}\n\nJenis Santet Yang di Terima Korban adalah *${terima1}*\n\nBy : ZeusXz`)
                 break
+case 'pelet':
+                    if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
+                    if (mentionedJidList.length === 0) return aruga.reply(from, 'Tag member yang mau dipelet\n\nContoh : #pelet @tag | dia cantik', id)
+                    if (args.length === 1) return aruga.reply(from, 'Masukkan alasan kenapa mempelet dia!!\n\nContoh : #pelet @tag | dia cantik', id)
+                        const pelet1 = pelet[Math.floor(Math.random() * (pelet.length))]
+                        const targetp = arg.split('|')[0]
+                        const alasanp = arg.split('|')[1]
+                        await aruga.sendTextWithMentions(from, `pelet dengan target ${targetp}, Dan alasan Mempelet dia karena ${alasanp}\n\nsedang di proses silahkan ditunggu\npelet ini membutuhkan waktu untuk sampai ke target adalah *${pelet1}.*\n\nBy : ZeusXz`)
+                break
 case 'kutuk':
                     if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
                     if (mentionedJidList.length === 0) return aruga.reply(from, 'Tag member yang mau dikutuk\n\nContoh : #kutuk @tag | kalo berak kaga di siram', id)
@@ -5263,7 +5284,7 @@ case 'pastebin': //BY VINZ
            if (args.length == 0) return aruga.reply(from, `Ketik command ${prefix}pastebin [text]|[nama]\nContoh ${prefix}pastebin ini contohnya|tolll`, id)
             await aruga.reply(from, mess.wait, id)
             var bdtrm = body.slice(10).trim().split('|')
-            const pstbn = await axios.get(`https://zeksapi.herokuapp.com/api/pastebin?apikey=benbenz&text=${bdtrm[0]}&name=${bdtrm[1]}`) 
+            const pstbn = await axios.get(`https://api.zeks.xyz/api/pastebin?text=&text=${bdtrm[0]}&name=${bdtrm[1]}`) 
 	    console.log(bdtrm[0])
 	    if (pstbn.data.status == false) return aruga.reply(from, pstbn.data.message ,id)
             await aruga.reply(from, pstbn.data.result, id) 
