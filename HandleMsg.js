@@ -860,8 +860,7 @@ break
  case 'fbdwn':
             case 'facebookdwn':
                 if (args.length == 0) return aruga.reply(from, `Kirim perintah *${prefix}fbdwn [linkfb]*`, id)
- if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
-                            aruga.reply(from, '_Scrapping Metadata...._', id)
+                             aruga.reply(from, '_Scrapping Metadata...._', id)
                 rugaapi.facebook(args)
                 .then(async(res) => {
                     await aruga.sendFileFromUrl(from, `${res.result.hd}\n\n*Setelah vidio dikirim dimohon berterimakasih*\n*Gak makasih = Block!!*\n\nBy : Zeus`, '', '', id)
@@ -872,7 +871,6 @@ break
                 break
 case 'tiktokdwn':
               if (args.length == 0) return aruga.reply(from, `Kirim perintah *${prefix}tiktokdwn [linkTiktok]*`, id)
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                  await aruga.reply(from, mess.wait, id)
                 rugaapi.tiktok(args)
                 .then(async(res) => {
@@ -950,7 +948,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
 	break
 
 case 'retasidentitas':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 const identitas = await axios.get(`http://docs-jojo.herokuapp.com/api/fake_identity`).then(res => {
     const identitas = `*name* : ${res.data.name}\n*gender :* ${res.data.gender}\n*age :* ${res.data.age}\n*birtday :* ${res.data.birtday}\n*country :* ${res.data.country}\n*email :* ${res.data.email}\n*email pass:* ${res.data.password}\n*phone:* ${res.data.phone}\n*pin_code:* ${res.data.pin_code}\n*code:* ${res.data.code}\n*address:* ${res.data.address}\n*blood_type:* ${res.data.blood_type}\n\nHacked By : Zeus`;
     aruga.sendText(from, identitas, id)
@@ -1033,7 +1030,6 @@ await aruga.reply(from, mess.wait, id)
 		break
 case 'tiktokvid':
 case 'tiktokdwn2':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 	aruga.reply(from, mess.wait, id)
 		rugaapi.tiktokdwn2(args)
 		.then(async(res) => {
@@ -1084,7 +1080,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                     })
                     break
 case 'prediksicuaca':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                         if (args.length == 0) return aruga.reply(from, `Untuk memprediksi cuaca Kota gunakan ${prefix}prediksicuaca [namakota]\nContoh : ${prefix}prediksicuaca Pontianak`, id)
                         const predik = await axios.get(`https://api.vhtear.com/weather?city=${body.slice(15)}&apikey=${vhtearkey}`)
                         const iksi = predik.data.result
@@ -1095,7 +1090,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                         })
                     break	
  case 'jadwaltv':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		   if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#jadwalTv [channel]*', id)
             const queri = body.slice(10)
             const jadwal = await fetch(`https://api.zeks.xyz/api/jadwaltv?channel=${queri}&apikey=apivinz`)
@@ -1146,7 +1140,6 @@ case 'javcosplay':
 					})
 					break
 case 'bjapan':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 					await aruga.reply(from, mess.wait, id)
 					rugaapi.japan()
 					.then(async ({ result,data }) => {
@@ -1163,7 +1156,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
 					})
 					break
 case 'bkorea':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 					await aruga.reply(from, mess.wait, id)
 					rugaapi.korea()
 					.then(async ({ result,data }) => {
@@ -1238,7 +1230,6 @@ case 'liputan6':
 					})
 					break
 case 'listheroml':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 					await aruga.reply(from, mess.wait, id)
 					rugaapi.hm()
 					.then(async ({ result,hasil }) => {
@@ -1262,7 +1253,7 @@ case 'foxnews':
 						for (let i = 0; i < result.length; i++) {
 							newsf += `\n\n• *Judul :* ${result[i].title}\n• *Time :* ${result[i].time}\n• *Url :* ${result[i].url}\n• *Berita :* ${result[i].content}\n• *country :* ${result[i].country}\n\n=_=_=_=_=_=_=_=_=_=_=_=_=\n\nBy : Zeus`
 						}
-						await aruga.reply(from, newsf, id)
+					await aruga.reply(from, newsf, id)
 						console.log('Succes Sending Tribun')
 					})
 					.catch(async (err) => {
@@ -1485,7 +1476,6 @@ case 'avengersfilm':
 					break
 
 case 'nekopoinew':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 					await aruga.reply(from, mess.wait, id)
 					rugaapi.kopi()
 					.then(async ({ result }) => {
@@ -1502,7 +1492,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
 					})
 					break
 					case 'listnekopoi':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 					await aruga.reply(from, mess.wait, id)
 					rugaapi.listnek()
 					.then (async ({ result }) => {
@@ -1594,7 +1583,6 @@ case 'filmapikdownload':
                                   
 case 'trendingtwit':
                     case 'trendtwit':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                         await aruga.reply(from, mess.wait, id)
                         rugaapi.trend()
                         .then(async ({ result }) => {
@@ -1612,7 +1600,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                         break
 case 'coronaword':
 case 'covidword':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                            await aruga.reply(from, mess.wait, id)
                         rugaapi.word()
                         .then(async ({ result }) => {
@@ -1709,7 +1696,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                                 })
                                 break
 case 'infoalamat':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
         if (args.length == 0) return aruga.reply(from, `Untuk mencari suatu alamat\nUsage : ${prefix}infoalamat polresta`, id)
 await aruga.reply(from, mess.wait, id)        
 rugaapi.ingfo(body.slice(17))
@@ -1771,7 +1757,6 @@ rugaapi.ggle(body.slice(9))
         })
         break
 case 'resepmasakan':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
         if (args.length == 0) return aruga.reply(from, `Untuk mencari di resep\nUsage : ${prefix}resepmasakan rawon`, id)
         rugaapi.resepmsk(body.slice(9))
         .then(async(res) => {
@@ -1796,14 +1781,12 @@ rugaapi.virgin(args[0],args[1])
         })
         break
 case 'anal':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait, id)
 		axios.get('https://nekos.life/api/v2/img/anal').then(res => {
 		aruga.sendStickerfromUrl(from, res.data.url)
 		})
 		break
 	case 'feetgif':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait, id)
 		axios.get('https://nekos.life/api/v2/img/feetg').then(res => {
 		aruga.sendStickerfromUrl(from, res.data.url)
@@ -1831,14 +1814,12 @@ case 'bocil':
     await aruga.sendFileFromUrl(from, 'http://piyobot.000webhostapp.com/gg.mp4', 'gg.mp4', 'boncil *berakk* si', id)
     break
 	case 'ttgif':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait,id)
 		axios.get('https://nekos.life/api/v2/img/boobs').then(res => {
 		aruga.sendStickerfromUrl(from, res.data.url)
 		})
 		break
 case 'lesbian':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait, id)
 		axios.get('https://nekos.life/api/v2/img/les').then(res => {
 		aruga.sendStickerfromUrl(from, res.data.url)
@@ -1858,14 +1839,12 @@ const wuya = body.slice(9)
 		await aruga.sendStickerfromUrl(from, `https://api.zeks.xyz/api/triger?apikey=apivinz&img=${giftr}`, id)
 		break
 case 'analimg':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait, id)
 		axios.get('https://nekos.life/api/v2/img/anal').then(res => {
 		aruga.sendFileFromUrl(from, res.data.url)
 		})
 		break
 	case 'feetgifimg':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait, id)
 		axios.get('https://nekos.life/api/v2/img/feetg').then(res => {
 		aruga.sendFileFromUrl(from, res.data.url)
@@ -1873,14 +1852,12 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
 		break
 
 	case 'ttgifimg':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait,id)
 		axios.get('https://nekos.life/api/v2/img/boobs').then(res => {
 		aruga.sendFileFromUrl(from, res.data.url)
 		})
 		break
 case 'lesbianimg':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 		aruga.reply(from, mess.wait, id)
 		axios.get('https://nekos.life/api/v2/img/les').then(res => {
 		aruga.sendFileFromUrl(from, res.data.url)
@@ -1899,42 +1876,36 @@ case 'raingifimg':
 		await aruga.sendFileFromUrl(from, `https://api.zeks.xyz/api/triger?apikey=apivinz&img=${giftri}`, id)
 		break
 case 'tickle':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			aruga.reply(from, mess.wait, id)
 			axios.get('https://nekos.life/api/v2/img/tickle').then(res => {
 			aruga.sendFileFromUrl(from, res.data.url)
 			})
 			break
 		case 'cuddle':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			aruga.reply(from, mess.wait, id)
 			axios.get('https://nekos.life/api/v2/img/cuddle').then(res => {
 			aruga.sendFileFromUrl(from, res.data.url)
 			})
 			break
 		case 'trapnime':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			aruga.reply(from, mess.wait, id)
 			axios.get('https://nekos.life/api/v2/img/trap').then(res => {
 			aruga.sendFileFromUrl(from, res.data.url, 'img.jpg', '', id)
 			})
 			break
 		case 'kuni':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			aruga.reply(from, mess.wait, id)
 			axios.get('https://nekos.life/api/v2/img/kuni').then(res => {
 		aruga.sendFileFromUrl(from, res.data.url)
 			})
 			break
 		case 'classic':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			aruga.reply(from, mess.wait, id)
 			axios.get('https://nekos.life/api/v2/img/classic').then(res => {
 			aruga.sendFileFromUrl(from, res.data.url)
 			})
 			break
 		case 'spank':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			aruga.reply(from, mess.wait, id)
 			axios.get('https://nekos.life/api/v2/img/spank').then(res => {
 			aruga.sendFileFromUrl(from, res.data.url)
@@ -1950,7 +1921,6 @@ case 'randompat':
 	})
 	break
 		case 'pokegif':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			aruga.reply(from, mess.wait, id)
 			axios.get('https://cdn.nekos.life/poke/poke_007.gif').then(res => {
 			aruga.sendStickerfromUrl(from, res.data.url)
@@ -2035,7 +2005,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
     break
 case 'kisahnabi':
 		
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 if (args.length == 0) return aruga.reply(from, `Kirim perintah ${prefix}kisahnabi nama nabi\nContoh : ${prefix}kisahnabi adam`, id)
 await aruga.reply(from, mess.wait, id)		
 const dudo2 = body.slice(11)
@@ -2102,7 +2071,6 @@ case 'valentine':
                         } 
                     break
 case 'randomquran':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 			await aruga.reply(from, mess.wait, id)
 			rugaapi.quran()
 				.then(async(res) => {
@@ -2142,8 +2110,7 @@ const putus = await rugaapi.putus(args[0],args[1],args[2])
             })
             break
 case 'iplocation':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
-        if (args.length == 0) return aruga.reply(from,`Untuk mencari lokasi ip\nUsage : ${prefix}iplocation [ip yang mau di lacak]`, id)
+       if (args.length == 0) return aruga.reply(from,`Untuk mencari lokasi ip\nUsage : ${prefix}iplocation [ip yang mau di lacak]`, id)
 await aruga.reply(from, mess.wait, id)        
 rugaapi.local(body.slice(12))
         .then(async(res) => {
@@ -2372,7 +2339,6 @@ await aruga.reply(from, mess.wait, id)
             })
             break
   case 'translate':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                         if (args.length == 0) return aruga.reply(from, `Untuk translate kata gunakan #translate [kode bahasa] my name is udin\n\nContoh : ${prefix}translate id|my name is udin`, id)
 await aruga.reply(from, mess.wait, id)                            
 const suway1 = arg.split('|')[0]
@@ -2544,7 +2510,6 @@ case 'tebakgambar2':
            break
 
  case 'anoboy':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                         await aruga.reply(from, mess.wait, id)
                         rugaapi.anoboy()
                             .then(async ({ result }) => {
@@ -2740,7 +2705,6 @@ case 'nekosticker':
                 };
                 break
                 case 'bjanime':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                 aruga.reply(from, mess.wait, id);
                 axios.get('https://nekos.life/api/v2/img/blowjob').then(res => {
                 	aruga.sendFileFromUrl(from, res.data.url);
@@ -2748,7 +2712,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                 break
                
                case 'rhentai':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                aruga.reply(from, mess.wait, id);
                axios.get('https://nekos.life/api/v2/img/hentai').then(res => {
                	aruga.sendFileFromUrl(from, res.data.url);
@@ -2761,14 +2724,12 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                });
                break
                 case 'cumgif':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                 aruga.reply(from, mess.wait, id);
                 axios.get('https://nekos.life/api/v2/img/cum').then(res => {
                 	aruga.sendFileFromUrl(from, res.data.url)
                 });
                 break
                 case 'bjgif':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                 aruga.reply(from, mess.wait, id);
                 axios.get('https://nekos.life/api/v2/img/bj').then(res => {
                 	aruga.sendFileFromUrl(from, res.data.url);
@@ -2795,7 +2756,6 @@ case 'waifusticker':
                 });
                 break
                 case 'slap':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                 aruga.reply(from, mess.wait, id);
                 axios.get('https://nekos.life/api/v2/img/slap').then(res => {
                 	aruga.sendFileFromUrl(from, res.data.url);
@@ -2814,7 +2774,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                     });
                     break
                 case 'baka':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                 aruga.reply(from, mess.wait, id);
                 axios.get('https://nekos.life/api/v2/img/baka').then(res => {
                     aruga.sendFileFromUrl(from, res.data.url, 'baka')
@@ -2996,7 +2955,6 @@ case 'lovetext':
             break
       
         case 'shopee':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
              if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}shopee [ Query ]*, Contoh : *${prefix}shopee HP Samsul a20*`, id)
             const shopek = body.slice(8)
             aruga.reply(from, mess.wait, id)
@@ -3013,7 +2971,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
             }
             break
    case 'playstore':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}playstore [ Query ]*, Contoh : *${prefix}playstore Mobile Legends*`, id)
             const keywotp = body.slice(11)
             aruga.reply(from, mess.wait, id)
@@ -3256,7 +3213,6 @@ case 'slidingtext':
 
 
 case 'infomobil':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
             if (args.length == 0) return aruga.reply(from, `Kirim perintah *${prefix}infomobil [ Merek Motor ]*\n\nContoh : *${prefix}infomobil avanza*`, id)
         const mobill = body.slice(11)
         aruga.reply(from, 'Wait sedang diproses...\n\nKalo Kaga Muncul Ada yang salah', id)
@@ -3272,7 +3228,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
                 }
             break
         case 'infomotor':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
             if (args.length == 0) return aruga.reply(from, `Kirim perintah *${prefix}infomotor [ Merek Motor ]*\n\nContoh : *${prefix}infomotor vario 150*`, id)
         const motoy = body.slice(11)
         aruga.reply(from, 'Wait sedang diproses...\n\nKalo Kaga Muncul Ada yang salah', id)
@@ -3806,7 +3761,6 @@ break
                     break;
         //Media 
               case 'jadwalbola':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
             aruga.reply(from, mess.wait, id)
             try {
                 const jdbola = await fetch(`https://api.vhtear.com/jadwalbola&apikey=${vhtearkey}`)
@@ -3847,7 +3801,6 @@ case 'emojistiker':
                 })
                 break
             case 'distance':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                 if (args.length === 0) return aruga.reply(from, `[❗] Kirim perintah *${prefix}distance [ Daerah1|Daerah2 ]*\ncontoh : *${prefix}distance Jakarta|Bandung*`, id)
                 aruga.reply(from, `[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!`, id)
                 try {
@@ -4122,7 +4075,6 @@ case 'blackpink':
                     })
 break
 case 'ytsearch':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
     if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}ytsearch [ Query ]*, Contoh : ${prefix}ytsearch alan walker alone`, id)
     const ytsher = body.slice(10)
     aruga.reply(from, mess.wait, id)
@@ -4462,7 +4414,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
 		break
   case 'mapz'://by aqulz
 case 'maps':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
             if (args.length === 0) return aruga.reply(from, `Kirim perintah *${prefix}mapz [optional]*, Contoh : *${prefix}maps Jakarta*`, id)
             const mapz = body.slice(6)
             try {
@@ -4548,7 +4499,6 @@ case 'alkitab':
             }
             break
    		case 'movie':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 				if (args.length == 0) return aruga.reply(from, `Untuk mencari suatu film dari website Bajakan:v\n${prefix}movie the uncanny counter`, id)
 				await aruga.reply(from, mess.wait, id)
 				rugaapi.movie(args)
@@ -5273,7 +5223,6 @@ case 'my':
             await aruga.reply(from, hih, id)
             break
 case 'ttp2':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
              if (args.length === 0) return aruga.reply(from, `Kirim perintah *#ttp2 [ Teks ]*, contoh *#ttp2 zeus*`, id)
             const ttp2t = body.slice(6)
             const lttp2 = ["Orange","White","Green","Black","Purple","Red","Yellow","Blue","Navy","Grey","Magenta","Brown","Gold"]
@@ -5412,7 +5361,6 @@ aruga.reply(from, mess.wait, id)
             })
             break
 case 'zeusimg':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
 aruga.reply(from, mess.wait, id)            
 const zeusimg = await rugaapi.zimg()
             await aruga.sendFileFromUrl(from, zeusimg, 'zeus.jpeg', 'By : ZeusXz...', id)
@@ -5714,7 +5662,6 @@ case 'gneontext':
 		 aruga.sendFileFromUrl(from, neontnyas.result)
 		 break
 case 'newstickerline':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
             aruga.reply(from, mess.wait, id)
             try {
                 const stcline = await fetch(`https://api.vhtear.com/newsticker?apikey=${vhtearkey}`)
@@ -5735,7 +5682,6 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
             break
  case 'news':
 case 'cnn':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
            aruga.reply(from, mess.wait, id)
             try {
                 const response2 = await fetch(`https://api.vhtear.com/beritaterbaru&apikey=${vhtearkey}`)
@@ -5796,14 +5742,12 @@ if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum 
             })
             break
 case 'ssphone':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
                if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#ssphone [linkWeb]*\nContoh : *#ssphone https://neonime.vip*', id)
 aruga.reply(from, mess.wait, id)            
 const ssphone = body.slice(9)
             aruga.sendFileFromUrl(from, `https://api.vhtear.com/ssweb?link=${ssphone}&type=phone&apikey=${vhtearkey}`, 'ssphone.jpg', '', id)
                      break
         case 'sspc':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
            if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#sspc [linkWeb]*\nContoh : *#sspc https://neonime.vip*', id)
 aruga.reply(from, mess.wait, id)            
 const sspc = body.slice(6)
@@ -5860,7 +5804,6 @@ const shorturl2 = body.slice(9)
           break
 
  case 'heroml':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
             if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#heroml [nama hero]*\nContoh : *#heroml akai*', id)
 aruga.reply(from, mess.wait, id)            
 try {
@@ -5875,8 +5818,7 @@ try {
            }
             break
  case 'nomorhoki':
-if (!isPrem) return aruga.reply(from, 'Command Premium!\ngagal! Maaf anda belum terdaftar sebagai user premium\nsilahkan chat owner bot untuk mendaftar.', id)
-             if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#nomorhoki [no hp kamu]*\nContoh : *#nomorhoki 082139549692*', id)
+            if (args.length === 0) return aruga.reply(from, 'Kirim perintah *#nomorhoki [no hp kamu]*\nContoh : *#nomorhoki 082139549692*', id)
 aruga.reply(from, mess.wait, id)            
 try {
             const resp = await axios.get('https://api.vhtear.com/nomerhoki?no=' + body.slice(11) + '&apikey=' + vhtearkey)
